@@ -1,0 +1,61 @@
+.about {
+    min-height: 100vh;
+    max-width: 100%;
+    background: $dark-color-1;
+    display: flex;
+    flex-flow: column wrap;
+    &-title {
+        h1 {
+            @include tipo-1(big-big, 1, 900, white);
+            opacity: .3;
+        }
+        align-self: flex-start;
+        padding: 50px;
+        @include mq('tablet') {
+            padding: 80px 100px;      
+        }
+        @include mqm('phone') {
+            align-self: center;
+            padding: 50px 5%;
+        }
+    }
+    &-description {
+        p {
+            @include tipo-1(small, 1.5, 300, white);
+            opacity: .9;
+        }
+        max-width: 600px; 
+        align-self: center;
+        padding: 50px;  
+        @include mq('tablet') {   
+            padding: 0 0 0 200px;     
+        }
+        @include mqm('phone') {
+            padding: 0 5%;
+        }
+    }
+    &-cta {
+        a {
+            display: flex;
+            padding-bottom: 60px;
+            align-items: center;
+            @include tipo-1(smaller, 1.4, 100, white); 
+            @include mqm('phone') {
+                padding-bottom: 0px;
+            }
+            .link-arrow {
+                margin-left: 15px;
+                background: white;
+                &::after, &::before { 
+                    background: white;
+                }
+            }       
+        }
+        align-self: center;  
+        padding: 50px;      
+        @include mq('tablet') {   
+            align-self: flex-end;
+            padding: 150px 115px 0 100px;
+        }
+    }
+}

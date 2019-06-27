@@ -1,0 +1,183 @@
+.pesquisas {
+    background: url("../img/bg-home.png");
+        
+    // intro start here
+    
+    &-intro {
+        .intro-bg {
+            max-width: 100%;
+            padding: 170px 0 50px 0;
+            @include mqm("tablet") {
+                padding: 25% 0 30px 0;
+            }
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                @include tipo-1('big-big', 1, 500, $dark-color-1);
+                font-size: 3rem;
+                padding: 0;
+                margin-bottom: 10px;
+                &::after {
+                    content: '';
+                    display: block;
+                    background: $dark-color-1;
+                    width: 20%;
+                    height: 4px;
+                    margin: 10px auto;
+                }
+            }
+            p {
+                @include tipo-1('small', 1.5, 300, $dark-color-1);
+                font-size: 1rem;
+                padding: 0;
+                margin: 0;
+                flex-shrink: 0;
+            }
+        }
+    }
+    
+    // intro end here
+    
+    
+    
+    
+    // Selectors start here
+    
+    &-selectors {
+        max-width: 100%;
+        padding: 100px 5% 0 5%;
+        @include mqm('tablet-wide'){
+            padding: 50px 5% 0 5%;
+        }
+        cursor: pointer;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            li {
+                padding: 10px 15px;
+                background: $dark-color-1;
+                border-radius: 10px;
+                margin: 7px;
+                @include tipo-1('small', 1.5, 300, white);
+                transition: all .3s ease;
+                &:hover { 
+                    transform: scale(1.1);
+                }
+                @include mqm('phone-wide') {
+                    padding: 10px;
+                    @include tipo-1('smaller', 1, 300, white);
+                    margin: 4px;
+                }
+            }
+        }
+    }
+    
+    // Selectors end here
+    
+    
+    
+    
+    // content start here
+    
+    &-content {
+        max-width: 100%;
+        padding: 100px 5%;
+        @include mqm('tablet'){
+            padding: 50px 10%;
+        }
+        @include mqm('phone'){
+            padding: 50px 5%;
+        }
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @include mqm('tablet-wide') {
+            grid-template-columns: 1fr;
+        }
+        justify-items: center;
+        grid-gap: 60px;
+        &-item {
+            max-width: 100%;
+            height: 450px;
+            @include mqm('phone-wide') {
+                height: auto;
+            }
+            &.active {
+                display: grid;
+            }
+            display: none;
+            .img-wrapper {
+                height: 400px;
+                @include mqm('phone-wide') {
+                    height: 200px;
+                }
+                overflow: hidden;
+                img {
+                    max-height: 100%;
+                    display: block;
+                    transition: all .8s ease;
+                    &:hover {
+                        filter: brightness(60%);
+                        transform: scale(1.05);
+                    }
+                }
+            }
+            .description-wrapper {
+                position: relative;
+                display: inline-block;
+                justify-self: end;
+                top: -90px;
+                @include mqm('phone-wide') {
+                    top: 0px;
+                    justify-self: stretch;
+                }
+                a {
+                    @include tipo-1('big', 1.3, 500, white);
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                    @include mqm('phone-wide') {
+                        text-align: center;
+                        display: block;
+                        padding: 10px;
+                        background: $dark-color-2;
+                        @include tipo-1('small', 1.3, 300, white);
+                    }
+                }
+                .specs {
+                    @include mqm('phone-wide') {
+                        display: none;
+                    }
+                    background: $dark-color-2;
+                    padding: 0 15px;
+                    margin-top: 0;
+                    display: flex;
+                    align-items: center;
+                    li {
+                        padding: 25px; 
+                        h3 {
+                            @include tipo-1('small', 1, 500, white);
+                            font-size: .6rem;
+                            text-transform: uppercase;
+                            letter-spacing: 2px;
+                            padding-bottom: 15px;
+                        }
+                        h4 {
+                            @include tipo-1('smaller', 1, 300, white);
+                            font-size: .6rem;
+                            opacity: .9;
+                        }
+                    }
+                    li + li {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+    
+    // intro end here
+    
+}

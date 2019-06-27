@@ -1,0 +1,60 @@
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    background: url('../img/bg-home.png');
+    &-illustration {
+        flex: 1 1 300px;
+        align-self: center;
+        padding: 50px;
+        padding: 5% 0;
+        @include mqm('tablet') {
+            padding: 10% 15% 0 15%;
+        }
+        img {
+            max-width: 80%;
+            @include mqm('phone') {
+                max-width: 90%;
+            }
+            @include mqm('tablet') {
+                margin: 0 auto;
+            }
+            margin: 0 0 0 auto;
+        }
+    }
+    &-cta {
+        flex: 1 1 20vw;
+        @include mqm('tablet-wide') {
+            flex: 1 1 30vw;
+        }
+        @include mqm('tablet') {
+            flex: 1 1 40vw;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px;
+        @include mqm('tablet') {
+            padding: 50px 5%;
+        }
+        padding-right: 70px;
+        @include mqm('tablet-wide'){
+            padding-right: 5%;
+        }
+        h2 {
+            @include tipo-1('big', 1.2, 100, $dark-color-1);
+            @include mqm('tablet') {
+                font-size: 1.7rem;
+            }
+            @include mqm('phone') {
+                font-size: 1.2rem;
+            }
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        a {
+            align-self: center;
+        }
+    } 
+}

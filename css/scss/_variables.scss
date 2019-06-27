@@ -1,0 +1,99 @@
+$container: 1200px;
+
+// ========== Cores ===========
+
+$primary-color-1: #509153;
+$primary-color-2: #5CC25F;
+$primary-color-3: #77DD77;
+$primary-color-4: #83E983;
+
+$dark-color-1: #1a1a1a;
+$dark-color-2: #3C3C3C;
+
+// ========== Tipografia ===========
+
+@mixin shadow {
+    box-shadow: -5px 5px 15px 0px rgba(44, 44, 44, .15);
+}
+
+
+// ========== Media queries =========== 
+
+$breakpoints: (
+    "phone":        400px,
+    "phone-wide":   480px,
+    "phablet":      560px,
+    "tablet-small": 640px,
+    "tablet":       768px,
+    "tablet-wide":  1070px,
+    "desktop":      1300px,
+    "desktop-wide": 1440px
+);
+
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+@mixin mqm($width, $type: max) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+// .site-header {
+//    padding: 2rem;
+//    font-size: 1.8rem;
+//    @include mq('tablet-wide') {
+//        padding-top: 4rem;
+//        font-size: 2.4rem;
+//    }
+// }
+
+// ========== Centralizar ===========
+
+@mixin center {
+    margin: { 
+        left: auto;
+        right: auto;
+    }
+}
+
+// ========== Tipografia ===========
+
+@mixin tipo-1 ($size: 18, $lheight: false, $weight: false, $color: false){
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    @if $size == "smaller" {
+        font-size: .8rem;
+    } @else if $size == "small" {
+        font-size: 1.125rem;
+    } @else if $size == "medium" {
+        font-size: 1.5rem;
+    } @else if $size == "big" {
+        font-size: 2.25rem;
+    }  @else if $size == "big-big" {
+        font-size: 3rem;
+        @include mq('desktop') {
+            font-size: 5rem;
+        }
+        @include mq('tablet'){
+            font-size: 4rem;
+        }
+    }
+    @if $color { color: $color };
+    @if $weight { font-weight: $weight };
+    @if $lheight { line-height: $lheight };
+}

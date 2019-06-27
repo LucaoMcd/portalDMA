@@ -1,0 +1,332 @@
+.politicas-publicas {
+    
+    background: url('../img/bg-home.png');
+    
+    // intro start here
+    
+    &-intro {
+        .intro-bg {
+            max-width: 100%;
+            padding: 170px 0 50px 0;
+            @include mqm("tablet") {
+                padding: 25% 0 30px 0;
+            }
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                @include tipo-1('big-big', 1, 500, $dark-color-1);
+                font-size: 3rem;
+                padding: 0;
+                margin-bottom: 10px;
+                &::after {
+                    content: '';
+                    display: block;
+                    background: $dark-color-1;
+                    width: 20%;
+                    height: 4px;
+                    margin: 10px auto;
+                }
+            }
+            p {
+                @include tipo-1('small', 1.5, 300, $dark-color-1);
+                font-size: 1rem;
+                padding: 0;
+                margin: 0;
+                flex-shrink: 0;
+            }
+        }
+    }
+    
+    // intro end here
+    
+    
+    
+    
+    // motivation start here
+    
+    &-motivation {
+        .motivation {
+            display: flex;
+            flex-direction: column;
+            padding: 100px 15%;
+            @include mqm('tablet'){
+                padding: 50px 5%;
+            }
+            &-title {
+                max-width: 350px;
+                margin: 20px auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .title-number {
+                    @include tipo-1 ('big', 1, 700, $dark-color-1);
+                    align-self: flex-start;
+                }
+                h2 {
+                    @include tipo-1 ('big', 1, 700, 0);
+                    font-size: 3.5;
+                }
+                .folha {
+                    margin: {
+                        top: 20px;
+                    }
+                    img {
+                        width: 40px;
+                    }
+                }
+            }
+            &-content {
+                padding: 50px 0 0 0;
+                display: grid;
+                grid-column-gap: 30px;
+                grid-row-gap: 30px;
+                grid-template-columns: 1fr 1fr;
+                @include mqm('tablet') {
+                    grid-template-columns: 1fr;
+                }
+                justify-content: space-around;
+                @include mqm('tablet-wide') {
+                    justify-content: space-between;
+                }
+                p {
+                    max-width: 100%;
+                    background: white;
+                    text-align:justify;
+                    @include tipo-1 ('smaller', 1.6, 300, false)
+                    @include mqm('phone') {
+                        font-size: 1rem;
+                    }
+                    & + p {
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+    
+    // motivation end here
+    
+    
+    
+    // principles start here 
+    
+    &-principles {
+        .principles {
+            padding: 100px 15%;
+            @include mqm('tablet'){
+                padding: 50px;
+            }
+            background: $dark-color-1;
+            &-title {
+                max-width: 350px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h2 {
+                    @include tipo-1 ('big', 1, 700, white);
+                    font-size: 3.5;
+                }
+                .folha {
+                    margin: {
+                        top: 40px;
+                    }
+                    align-self: center;
+                    img {
+                        width: 40px;
+                    }
+                }
+            }
+            &-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                &-item {
+                    width: 1000px;
+                    margin: 50px 0;
+                    display: flex;
+                    align-items: center;
+                    span {
+                        width: 500px;
+                        font-weight: 700;
+                        color: #cecece;
+                        font-family: Georgia, serif;
+                        font-size: 17rem;
+                        @include mqm('tablet') {
+                            font-size: 12rem;
+                        }
+                        @include mqm('phone') {
+                            font-size: 9rem;
+                        }
+                        opacity: .15;
+                        letter-spacing: 10px;
+                        text-align: center;
+                        transform: translateX(50%);
+                    }
+                    p {
+                        max-width: 500px;
+                        @include mqm('phone-wide') {
+                            max-width: 300px;
+                        }
+                        @include tipo-1 ('small', 1.6, 300, #fff);
+                        @include mqm('phone') {
+                            font-size: 1rem;
+                        }
+                        text-align: center;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
+    
+    // principles end here
+    
+    
+    // objectives start here
+    
+    &-objectives {
+        .objectives {
+            display: flex;
+            flex-direction: column;
+            padding: 100px 15%;
+            @include mqm('tablet'){
+                padding: 50px;
+            }
+            &-title {
+                max-width: 350px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h2 {
+                    @include tipo-1 ('big', 1, 700, $dark-color-1);
+                    font-size: 3.5;
+                }
+                .folha {
+                    margin: {
+                        top: 40px;
+                    }
+                    align-self: center;
+                    img {
+                        width: 40px;
+                    }
+                }
+            }
+            &-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                max-width: 80%;
+                margin: 0 auto;
+                &-item {
+                    width: 1000px;
+                    margin: 50px 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    
+                    @include mqm('tablet-wide') {
+                        width: 800px;
+                        flex-direction: column;
+                    }
+                            
+                    &::before {
+                        content: '';
+                        display: block;
+                        opacity: .08;
+                        width: 1060px;
+                        height: 140px;
+                        background: #000;
+                        border-radius: 7px;
+                        @include shadow;
+                        transform: translateX(-30px);
+                        position: absolute;
+                            z-index: 1;
+                        @include mqm('tablet-wide') {
+                            display: none;
+                        }
+                    }
+                    
+                    &:nth-child(1n) {
+                        span {
+                            z-index: 2;
+                            width: 500px;
+                            font-weight: 700;
+                            color: #cecece;
+                            font-family: Georgia, serif;
+                            font-size: 16rem;
+                            letter-spacing: 10px;
+                            text-align: center;
+                            
+                            @include mqm('tablet-wide') {
+                                font-size: 9rem;
+                                width: 400px;
+                            }
+                            @include mqm('phone') {
+                                font-size: 7rem;
+                            }
+                        }
+                        p {
+                            z-index: 2;
+                            max-width: 500px;
+                            text-align: center;
+                            @include tipo-1 ('small', 1.4, 300, $dark-color-1);
+                            
+                            @include mqm('tablet-wide') {
+                                width: 400px;
+                            }
+                            @include mqm('tablet') {
+                                max-width: 300px;
+                            }
+                        }
+                    }
+                    &:nth-child(2n) {
+                        span {
+                            width: 500px;
+                            font-weight: 700;
+                            color: #cecece;
+                            font-family: Georgia, serif;
+                            font-size: 16rem;
+                            letter-spacing: 10px;
+                            text-align: center;
+                            order: 1;
+                            @include mqm('tablet-wide') {
+                                font-size: 9rem;
+                                width: 400px;
+                            }
+                            @include mqm('phone') {
+                                font-size: 7rem;
+                            }
+                        }
+                        p {
+                            max-width: 500px;
+                            @include mqm('tablet-wide') {
+                                width: 400px;
+                            }
+                            @include tipo-1 ('small', 1.4, 300, $dark-color-1);
+                            @include mqm('phone') {
+                                font-size: 1rem;
+                            }
+                            @include mqm('tablet') {
+                                max-width: 300px;
+                            }
+                            text-align: center;
+                            order: 1;
+                        }
+                    }
+//                    .viii {
+//                        transform: translateX(-100px);
+//                    }
+                }
+            }
+        }
+    }
+    
+    // objectives end here
+}

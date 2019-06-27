@@ -1,0 +1,269 @@
+.management-council {
+    
+    background: url('../img/bg-home.png');
+    
+    // intro start here
+    
+    &-intro {
+        .intro-bg {
+            max-width: 100%;
+            padding: 170px 0 50px 0;
+            @include mqm("tablet") {
+                padding: 25% 0 30px 0;
+            }
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1 {
+//                @include tipo-1('big-big', 1, 700, white);
+                @include tipo-1('big-big', 1, 500, $dark-color-1);
+                font-size: 3rem;
+                padding: 0;
+                margin-bottom: 10px;
+                &::after {
+                    content: '';
+                    display: block;
+                    background: $dark-color-1;
+                    width: 20%;
+                    height: 4px;
+                    margin: 10px auto;
+                }
+            }
+            p {
+//                @include tipo-1('medium', 1.5, 300, white);
+                @include tipo-1('small', 1.5, 300, $dark-color-1);
+                font-size: 1rem;
+                padding: 0;
+                margin: 0;
+                flex-shrink: 0;
+            }
+        }
+    }
+    
+    // intro end here
+    
+    
+    
+    
+    
+    // motivation start here
+    
+    &-description {
+        padding: 100px 10% 50px 10%;
+        @include mqm('tablet-wide'){
+            padding: 50px 5% 0 5%;
+        }
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-around;
+        @include mqm('tablet-small'){
+            grid-template-columns: 1fr;
+            justify-items: center;
+            grid-row-gap: 30px;
+            margin-bottom: 50px;
+        }
+        .motivation {
+            @include mqm('tablet-wide'){
+                padding-right: 20px;
+            }
+            @include mqm('tablet-small'){
+                padding-right: 0;
+            }
+            &-title {
+                max-width: 350px;
+                margin: {
+                    bottom: 60px;
+                    top: 50px;
+                }
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                @include mqm('tablet-small'){
+                    justify-content: center;
+                    text-align: center;
+                    margin: 0;
+                }
+                h2 {
+                    @include tipo-1 ('big', 1, 700, 0);
+                    font-size: 3.5;
+                }
+                .folha {
+                    margin: {
+                        top: 20px;
+                        left: 90px;
+                    }
+                    @include mqm('tablet-small') {
+                        margin: 20px auto 30px auto;
+                    }
+                    img {
+                        width: 40px;
+                    }
+                }
+            }
+            &-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                @include mqm('tablet-small') {
+                    text-align: center;
+                }
+                p {
+                    max-width: 350px;
+                    @include tipo-1 ('small', 1.6, 300, false);
+                    @include mqm('phone') {
+                        max-width: 260px;
+                    }
+                }
+                p + p {
+                    margin-top: 30px;
+                }
+            }
+        }
+        
+        .composition {
+            .description-wrapper {
+                display: inline-block;
+                align-self: flex-end;
+                padding-bottom: 60px;
+                padding: 50px 40px;
+                background: $dark-color-2;
+                h2 {
+                    @include tipo-1('big', 1, 700, white);
+                    padding-bottom: 60px;
+                    @include mqm('tablet-wide') {
+                        padding-bottom: 50px;   
+                    }
+                }
+                .specs {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-row-gap: 60px;
+                    grid-column-gap: 20px;
+                    @include mqm('tablet-wide') {
+                        grid-template-columns: 1fr 1fr;
+                        grid-row-gap: 30px;
+                        grid-column-gap: 10px;
+                    }
+                    li {
+                        max-width: 180px;
+                        h3 {
+                            @include tipo-1('small', 1.4, 500, white);
+                            font-size: .6rem;
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                            padding-bottom: 15px;
+                        }
+                        h4 {
+                            @include tipo-1('smaller', 1, 300, white);
+                            font-size: .6rem;
+                            opacity: .9;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // motivation end here
+    
+    
+    // principles start here 
+    
+    &-jurisdiction {
+        .jurisdiction {
+            padding: 100px 15%;
+            @include mqm('tablet'){
+                padding: 50px;
+            }
+            background: $dark-color-1;
+            &-title {
+                max-width: 350px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h2 {
+                    @include tipo-1 ('big', 1, 700, white);
+                    font-size: 3.5;
+                    @include mqm('phone-wide') {
+                        @include tipo-1 ('medium', 1, 700, white);
+                    }
+                }
+                .folha {
+                    margin: {
+                        top: 40px;
+                    }
+                    @include mqm('phone-wide') {
+                        margin-top: 20px;
+                    }
+                    align-self: center;
+                    img {
+                        width: 40px;
+                        @include mqm('phone-wide') {
+                            width: 30px;
+                        }
+                    }
+                }
+            }
+            &-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                &-item {
+                    width: 1000px;
+                    margin: 50px 0;
+                    display: flex;
+                    align-items: center;
+                    span {
+                        width: 500px;
+                        font-weight: 700;
+                        color: #cecece;
+                        font-family: Georgia, serif;
+                        font-size: 17rem;
+                        @include mqm('tablet') {
+                            font-size: 12rem;
+                        }
+                        @include mqm('phone') {
+                            font-size: 9rem;
+                        }
+                        opacity: .15;
+                        letter-spacing: 10px;
+                        text-align: center;
+                        transform: translateX(50%);
+                    }
+                    p {
+                        width: 500px;
+                        @include mqm('phone-wide') {
+                            max-width: 300px;
+                        }
+                        @include tipo-1 ('small', 1.6, 300, #fff);
+                        text-align: center;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
+    
+    // principles end here
+    
+    
+    // objectives start here
+    
+    &-smash {
+        text-align: center;
+        padding: 7% 10%;
+        @include mqm('tablet-wide') {
+            
+        }
+        p {
+            max-width: 700px;
+            @include tipo-1 ('small', 1.6, 300, $dark-color-1);
+            margin: 0 auto;
+        }
+    }
+    
+    // objectives end here
+}

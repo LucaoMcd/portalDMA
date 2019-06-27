@@ -1,0 +1,21 @@
+.map {
+    &-title {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        text-align: center;
+        background: $dark-color-1;
+        h2 {
+            display: flex;
+            align-items: center;
+            @include tipo-1('medium', 1, 400, #FFF);
+            &::after, &::before {
+                content: '';
+                width: 100px;
+                height: 3px;
+                margin: 0 20px;
+                background: #FFF;
+            }
+        }
+    }
+}

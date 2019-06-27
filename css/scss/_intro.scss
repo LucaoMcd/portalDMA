@@ -1,0 +1,148 @@
+// General style
+
+.intro {
+    // wrap
+    max-width: 100%;
+    background: url('../img/bg-home.png');
+    display: grid;
+    grid:
+        "title img"
+        / 1fr 1fr;
+    @include mqm('tablet') {
+        grid:
+            "img"
+            "title"
+            / 1fr;
+    }
+    justify-content: center;
+    align-content: center;
+    padding: 5% 0 7% 0;
+    @include mqm('tablet') {
+        padding-top: 18%;
+    }
+    @include mqm('phone') {
+        padding-top: 25%;
+    }
+    
+    &-title {
+        grid-area: title;
+        align-self: center;
+        justify-self: end;
+        position: relative;
+        width: 100%;
+        display: grid;
+        @include mqm('tablet'){
+            text-align: center;
+            justify-self: center;
+            padding: 0;
+        }
+        .text {
+            position: relative;
+            z-index: 100;
+            justify-self: center;
+            @include mqm('tablet-wide') {
+                padding-left: 9%;
+            }
+            @include mqm('tablet') {
+                padding-left: 0;
+            }
+            h1 {
+                margin: 0;
+                display: block;
+                @include tipo-1(big-big, 1, 400, $dark-color-1);
+                span {
+                    font-weight: 700;
+                    color: $primary-color-1;
+                }
+                @include mqm('tablet-wide') {
+                    font-size: 3rem;
+                }
+                @include mqm('phone') {
+                    font-size: 2rem;
+                }
+            }
+            p {
+                @include tipo-1(smaller, 1, 500, #9B9B9B);
+                margin-top: 20px;
+                opacity: 1;
+                background: white;
+                max-width: 80%;
+                @include mqm('tablet') {
+                    text-align: center;
+                    margin: 15px auto;
+                }
+            }
+        }
+        .folhas-bg {
+            position: absolute;
+            top: -100%;
+            img {
+                max-width: 100%;
+            }
+            @include mqm('tablet-wide') {
+                top: -80%;
+            }
+            @include mqm('tablet') {
+                display: none;
+            }
+        }
+    }
+    
+    &-illustration {
+        grid-area: img;
+        align-self: center;
+        justify-self: start;
+        padding: 0 5% 0 0;
+        @include mqm('tablet'){
+            justify-self: center;
+            padding: 0 0 30px 0;
+            max-width: 80%;
+        }
+        img {
+            max-width: 100%;
+            @include mqm('tablet') {
+                max-width: 80%;
+            }
+            margin: 0 auto;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

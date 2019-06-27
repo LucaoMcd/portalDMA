@@ -1,0 +1,138 @@
+.pesquisa {
+    background: url('../img/bg-home.png');
+    &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-head {
+            box-sizing: border-box;
+            width: 100vw;
+            padding: 150px 10% 50px 10%;
+            @include mqm('tablet-wide'){
+                padding: 100px 10% 0 10%;
+            }
+            background: $dark-color-1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1 {
+                align-self: flex-start;
+                @include tipo-1 ('big-big', 1, 700, white);
+                padding: 0;
+                margin: 0;
+                margin-bottom: 15px;
+            }
+            .img-wrapper {
+                overflow: hidden;
+                padding-bottom: 100px;
+                @include mqm('tablet') {
+                    padding-bottom: 0;
+                }
+                img {
+                    max-width: 100%;
+                    transition: all 1.7s ease;
+                    &:hover {
+                        transform: scale(1.02);
+                    }
+                }
+            }
+            .description-wrapper {
+                display: inline-block;
+                align-self: flex-end;
+                @include mqm('tablet-small'){
+                    align-self: flex-start;
+                    padding: 30px 0;
+                }
+                padding-bottom: 60px;
+                a {
+                    @include tipo-1('big', 1.3, 500, white);
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+                .specs {
+                    background: $dark-color-2;
+                    padding: 0 15px;
+                    margin-top: 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    @include mqm('tablet-small'){
+                        background: transparent;
+                        padding: 0;
+                    }
+                    li {
+                        padding: 25px; 
+                        @include mqm('tablet-small'){
+                            padding: 5px 10px;
+                        }
+                        h3 {
+                            @include tipo-1('small', 1, 500, white);
+                            font-size: .6rem;
+                            text-transform: uppercase;
+                            letter-spacing: 2px;
+                            padding-bottom: 15px;
+                        }
+                        h4 {
+                            @include tipo-1('smaller', 1, 300, white);
+                            font-size: .6rem;
+                            opacity: .9;
+                        }
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .resume {
+                align-self: flex-end;
+                p {
+                    @include tipo-1('small', 1.4, 500, white);
+                    max-width: 500px;
+                    padding-bottom: 50px;
+                    margin: 0;
+                    @include mqm('phone-wide'){
+                        @include tipo-1('small', 1.4, 300, white);
+                    }
+                }
+            }
+        }
+        
+        .subtitle {
+            h2 {
+                @include tipo-1('medium', 1, 700, $dark-color-1);
+                padding-top: 100px;
+                @include mqm('tablet') {
+                    padding-top: 50px;
+                    max-width: 300px;
+                }
+            }
+        }
+        .text {
+            padding: 50px 10%;
+            max-width: 750px;
+            p {
+                max-width: 100%;
+                @include tipo-1('small', 1.4, 300, $dark-color-1);
+            }
+            p + p {
+                margin-top: 30px;
+            }
+        }
+        .next-research {
+            align-self: flex-end;
+            padding-right: 150px;
+            margin-bottom: 100px;
+            @include mqm('tablet-wide'){
+                margin-bottom: 50px;
+            }
+            a {
+                display: flex;
+                margin: 20px 0 0 0;
+                @include tipo-1( smaller, 0, 700, $dark-color-1);
+                opacity: 1;
+
+                .link-arrow {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+}

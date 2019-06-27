@@ -1,0 +1,488 @@
+.infra {
+    
+    background: url('../img/bg-home.png');
+    
+    // intro start here
+    
+    &-intro {
+        .intro-bg {
+            max-width: 100%;
+            padding: 170px 0 50px 0;
+            @include mqm("tablet") {
+                padding: 25% 0 30px 0;
+            }
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                @include tipo-1('big-big', 1, 500, $dark-color-1);
+                font-size: 3rem;
+                @include mqm('phone-wide') {
+                    font-size: 2rem;
+                }
+                padding: 0;
+                margin-bottom: 10px;
+                &::after {
+                    content: '';
+                    display: block;
+                    background: $dark-color-1;
+                    width: 20%;
+                    height: 4px;
+                    margin: 10px auto;
+                }
+            }
+            p {
+                @include tipo-1('small', 1.5, 300, $dark-color-1);
+                font-size: 1rem;
+                padding: 0;
+                margin: 0;
+                flex-shrink: 0;
+            }
+        }
+    }
+    
+    // intro end here
+    
+    
+    
+    
+    
+    
+    // Description start here
+    
+    &-description {
+        display: flex;
+        flex-direction: column;
+        .infra-d {
+            padding: 100px 15% 100px 15%;
+            @include mqm('tablet'){
+                padding: 50px 10%;
+            }
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            a {
+                img {
+                    max-width: 300px;
+                    @include mqm('phone') {
+                        width: 220px;
+                        margin: {
+                            left: auto;
+                            right: auto;
+                        }
+                    }
+                    margin-right: 50px;
+                    margin-bottom: 30px;
+                }
+            }
+            &-text {
+                display: flex;
+                flex-direction: column;
+                p {
+                    @include tipo-1('small', 1.4, 300, $dark-color-1);
+                    max-width: 500px;
+                    margin: {
+                        left: 50px;
+                        bottom: 20px;
+                    }
+                    @include mqm('tablet') {
+                        margin-left: 0;
+                    }
+                    opacity: .9;
+                }
+                a {
+                    align-self: flex-end;
+                    @include tipo-1('smaller', 1, 500, $dark-color-1);
+                    opacity: .9;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            
+        }
+        .dma {
+            background: $dark-color-1;
+            display: grid;
+            grid: 
+                "text img"
+                /1fr 1fr;
+            justify-items: center;
+            align-items: center;
+            column-gap: 30px;
+            grid-row-gap: 30px;
+            padding: 50px 15%;
+            @include mqm('tablet-wide') { padding: 50px 5% }
+            @include mqm('tablet') { grid: "text" "img" /1fr; }
+            &-text {
+                grid-area: text;
+                &-bg {
+                    h1 {
+                        @include tipo-1('medium', 1.4, 500, white)
+                    }
+                    p {
+                        @include tipo-1('smaller', 1.5, 300, white);
+                        max-width: 460px;
+                        opacity: .9;
+                    }
+                    p + p {
+                        margin-top: 30px;
+                    }
+                }
+            }
+            &-img-wrapper {
+                grid-area: img;
+                max-width: 400px;
+                img {
+                    max-width: 100%;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+    
+    // Description end here
+    
+    
+    
+    
+    
+    
+    // Sectors start here
+    
+    &-sectors {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 70px 0 100px 0;
+        @include mqm('desktop'){
+            padding: 50px;
+        }
+        grid-row-gap: 60px;
+        justify-content: center;
+        align-items: center;
+        
+        .title {
+            width: 350px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2 {
+                @include tipo-1 ('big', 1, 700, 0);
+                font-size: 3.5;
+            }
+            .folha {
+                margin: {
+                    top: 20px;
+                }
+                img {
+                    width: 40px;
+                }
+            }
+        }
+        
+        .selectors {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 0 15%;
+            @include mqm('desktop'){
+                padding: 0 10%;
+            }
+            @include mqm('tablet-wide'){
+                display: none;
+            }
+            &-item {
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-width: 250px;
+                height: 80%;
+                border-radius: 15px;
+                overflow: hidden;
+                cursor: pointer;
+                transition: all .3s ease;
+                &:hover {
+                    transform: scale(1.05);
+                }
+                img {
+                    max-width: 100%;
+                    filter: brightness(80%);
+                }
+                h3 {
+                    position: relative;
+                    top: -180px;
+                    @include tipo-1 ('medium', 1, 500, white);
+                    letter-spacing: 20px;
+                    padding: 7px 0 7px 20px;
+                    border: 2px solid white;
+                    border-radius: 7px;
+                }
+            }
+        }
+
+        [data-target] {
+            opacity: 0;
+            visibility: hidden;
+            transform: translate3d(-50px, 0, 0);
+            position: absolute;
+            top: 0;
+        }
+
+        [data-target].active {
+            opacity: 1;
+            visibility: visible;
+            transition: .3s;
+            position: relative;
+            top: auto;
+            transform: translate3d(0px, 0, 0);
+        }
+
+        [data-click].active {
+            transform: scale(1.05);
+        }
+        
+        .description {
+            @include mqm('tablet-wide'){
+                display: none;
+            }
+            &-item {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 30px 50px 45px 50px;
+                @include shadow;
+                background: white;
+                text-align: center;
+                border-radius: 15px;
+                p {
+                    @include tipo-1 ('small', 1.6, 300, $dark-color-1);
+                    margin-bottom: 40px;
+                    opacity: .9;
+                }
+            }
+        }
+    }
+    
+    .mobile-description {
+        display: none;
+        @include mqm('tablet-wide'){
+            display: block;
+        }
+        text-align: center;
+        max-width: 100%;
+        h3 {
+            text-align: center;
+            @include tipo-1('medium', 1, 700, $dark-color-2);
+            letter-spacing: 20px;
+            padding-bottom: 7px;
+            padding-left: 20px;
+            border-bottom: 2px solid $dark-color-2;
+            display: inline-block;
+            margin: 30px 0;
+        }
+        p {
+            @include tipo-1('small', 1.4, 300, $dark-color-1);
+            margin-bottom: 10px;
+            opacity: .9;
+            max-width: 100%;
+            @include mqm('phone'){
+                max-width: 280px;
+                @include center;
+            }
+        }
+    }
+    
+    // Sectors end here
+    
+    
+    
+    
+    
+    
+    // Services start here
+    
+    &-services {
+        padding: 100px 2px;
+        @include mqm('tablet'){
+            padding: 50px 2px;
+        }
+        background: $dark-color-1;
+        .title {
+            max-width: 350px;
+            @incude mqm('phone') {
+                margin: 0 auto;
+            }
+            margin: 0 auto 60px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2 {
+                @include tipo-1 ('big', 1, 700, white);
+                font-size: 3.5;
+            }
+            .folha {
+                margin: {
+                    top: 20px;
+                }
+                img {
+                    width: 40px;
+                }
+            }
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            @include mqm('tablet') {
+                grid-template-columns: 1fr 1fr;
+            }
+            @include mqm('phone') {
+                grid-template-columns: 1fr;
+            }
+            &-arrow {
+                display: grid;
+                grid: 
+                    "arrow nome";
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+                grid-column-gap: 10px;
+                height: 370px;
+                span {
+                    grid-area: arrow;
+                    font-size: 4rem;
+                    font-weight: bold;
+                    color: white;
+                    display: block;
+                }
+                p {
+                    grid-area: nome;
+                    font-size: 3rem;
+                    font-weight: bold;
+                    color: white;
+                }
+            }
+            &-item {
+                max-width: 300px;
+                padding: 50px 60px;
+                @include mqm('tablet') {
+                    padding: 10px;
+                    margin: 0 50px;
+                }
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .illustration {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 200px;
+                    height: 200px;
+                    background: white;
+                    border-radius: 100px;
+                    margin-bottom: 50px;
+                    img {
+                        max-width: 80%;
+                        max-height: 80%;
+                    }
+                }
+                .description {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    h3 {
+                        @include tipo-1 ('medium', 1, 500, white);
+                        margin-bottom: 20px;
+                        opacity: .9;
+                    }
+                    p {
+                        @include tipo-1 ('smaller', 1.5, 300, white);
+                        max-width: 200px;
+                        opacity: .6;
+                    }
+                }
+            }
+        }
+    }
+    
+    // Services end here
+    
+    
+    
+    
+    
+    
+    // Services start here
+    
+    &-smash {
+        padding: 100px 15%;
+        @include mqm('tablet') {
+            padding: 50px 15%;
+        }
+        p {
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+            @include tipo-1 ('medium', 1.5, 300, $dark-color-1);
+            @include mqm('tablet') {
+                @include tipo-1 ('small', 1.5, 300, $dark-color-1);
+            }
+        }
+    }
+    
+    // Services end here
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
