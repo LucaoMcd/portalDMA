@@ -2,10 +2,6 @@
 
 .intro {
     // wrap
-    @include mqm('tablet') {
-        min-height: 100vh;
-        box-sizing: border-box;
-    }
     max-width: 100%;
     background: url('../img/bg-home.png');
     display: grid;
