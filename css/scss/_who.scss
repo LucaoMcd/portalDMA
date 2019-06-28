@@ -11,9 +11,10 @@
         flex-flow: column wrap;
         
         & > h2 { 
+            box-sizing: border-box;
             padding: 0 0 100px 0;
             @include mqm('tablet', 'max') {
-                padding: 50px 50px 0 50px;
+                padding: 50px 10px 0 10px;
             }
             max-width: 100%;
             @include tipo-1 ('big', 1.1, 900, white);   

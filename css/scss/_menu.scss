@@ -86,7 +86,9 @@
         top: 0;
         right: 0;
         height: 100vh;
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
         padding: 50px 70px;
         background: #FFF;
         transition: all .7s ease;
@@ -109,7 +111,7 @@
                 "cta cta" 1fr
                 "media media" 1fr
             /   1fr;
-            width: 100%;
+            width: 90%;
         }
         
         &-close {

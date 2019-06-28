@@ -21,7 +21,7 @@
     }
     &-description {
         p {
-            @include tipo-1(small, 1.5, 300, white);
+            @include tipo-1(smaller, 1.5, 300, white);
             opacity: .9;
         }
         max-width: 600px; 

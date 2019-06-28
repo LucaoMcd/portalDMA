@@ -1,5 +1,4 @@
 .contact {
-    display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
@@ -52,6 +51,7 @@
             }
             margin-bottom: 50px;
             text-align: center;
+            width: 100%;
         }
         a {
             align-self: center;
