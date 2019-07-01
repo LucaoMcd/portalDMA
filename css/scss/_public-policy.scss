@@ -168,7 +168,7 @@
                     &:last-child {
                         margin-bottom: 100px;
                         @include mqm('tablet-small'){
-                            margin-bottom: 0px;
+                            margin-bottom: 50px;
                         }
                     }
                     span {
