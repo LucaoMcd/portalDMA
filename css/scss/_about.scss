@@ -51,8 +51,12 @@
                 }
             }       
         }
-        align-self: center;  
-        padding: 50px;      
+        align-self: center;
+        padding: 50px;
+        @include mqm('phone') {
+            padding: 50px 15%;
+            text-align: right;
+        }
         @include mq('tablet') {   
             align-self: flex-end;
             padding: 150px 115px 0 100px;
