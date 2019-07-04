@@ -71,17 +71,20 @@
             @include mqm('tablet-small'){
                 padding-right: 0;
             }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             &-title {
-                max-width: 350px;
+                width: 100%;
                 margin: {
                     bottom: 60px;
                     top: 50px;
                 }
                 display: flex;
                 flex-direction: column;
-                justify-content: flex-start;
+                align-items: center;
+                justify-content: center;
                 @include mqm('tablet-small'){
-                    justify-content: center;
                     text-align: center;
                     margin: 0;
                 }
@@ -90,9 +93,9 @@
                     font-size: 3.5;
                 }
                 .folha {
+                    align-self: center;
                     margin: {
                         top: 20px;
-                        left: 90px;
                     }
                     @include mqm('tablet-small') {
                         margin: 20px auto 30px auto;
@@ -110,11 +113,13 @@
                     text-align: center;
                 }
                 p {
-                    max-width: 350px;
+                    max-width: 100%;
+                    padding: 0 100px;
                     @include tipo-1 ('small', 1.6, 300, false);
                     @include mqm('phone') {
                         max-width: 260px;
                     }
+                    text-align: justify;
                 }
                 p + p {
                     margin-top: 30px;
@@ -184,8 +189,9 @@
                 flex-direction: column;
                 align-items: center;
                 h2 {
-                    @include tipo-1 ('big', 1, 700, white);
+                    @include tipo-1 ('big', 1.2, 700, white);
                     font-size: 3.5;
+                    text-align: center;
                     @include mqm('phone-wide') {
                         @include tipo-1 ('medium', 1, 700, white);
                     }
@@ -212,6 +218,7 @@
                 justify-content: center;
                 align-items: center;
                 &-item {
+                    transform: translateY(-50%);
                     width: 1000px;
                     @include mqm('tablet-wide'){
                         width: 760px;

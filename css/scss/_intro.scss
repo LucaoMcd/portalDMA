@@ -17,6 +17,9 @@
     justify-content: center;
     align-content: center;
     padding: 7% 0 7% 0;
+    @include mqm('desktop') {
+        padding-top: 10%;
+    }
     @include mqm('tablet-wide') {
         padding-top: 12%;
     }
