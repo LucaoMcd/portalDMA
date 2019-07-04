@@ -307,11 +307,16 @@
         }
         background: $dark-color-1;
         .owl-nav {
-            max-width: 100px;
+            width: 100%;
+            height: 70px;
             margin: 0 auto;
+            box-sizing: border-box;
+            padding: 0 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: absolute;
+            top: 240px;
             
             span {
                 text-align: center;
@@ -448,9 +453,6 @@
     }
     
     // Services end here
-    
-    
-    
 }
 
 

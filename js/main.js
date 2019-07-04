@@ -40,26 +40,26 @@ $('[data-group]').each(function () {
 });
 
 $(document).ready(function () {
-    $('.nonloop').owlCarousel({
-        center: true,
-        items: 2,
-        loop: false,
+    $('.owl-carousel').owlCarousel({
+        loop: true,
         nav: true,
-        margin: 50,
-        responsiveClass:true,
+        margin: 10,
+        responsiveClass: true,
         responsive:{
             0:{
                 items:1,
-                nav:true
+                nav:true,
+                loop:true
             },
             600:{
                 items:2,
-                nav:true
+                nav:true,
+                loop:true
             },
             1000:{
                 items:3,
                 nav:true,
-                loop:false
+                loop:true
             }
         }
     });
@@ -168,11 +168,6 @@ initFilterTag()
 
 const small = window.matchMedia('(max-width: 360px)');
 const all = document.querySelectorAll('*')
-
-//all.forEach(e => {
-//    let tamRect = e.getBoundingClientRect()
-//    if( tamRect.width > )
-//})
 
 if(small.matches) {
   console.log('Tela menor que 360px')

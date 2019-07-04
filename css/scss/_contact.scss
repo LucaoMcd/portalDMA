@@ -1,4 +1,5 @@
 .contact {
+    display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
@@ -19,7 +20,7 @@
             @include mqm('tablet') {
                 margin: 0 auto;
             }
-            margin: 0 auto 0 auto;
+            margin: 0 0 0 auto;
         }
     }
     &-cta {
@@ -42,7 +43,7 @@
             padding-right: 5%;
         }
         h2 {
-            @include tipo-1('big', 1.2, 100, $dark-color-1);
+            @include tipo-1('medium', 1.2, 100, $dark-color-1);
             @include mqm('tablet') {
                 font-size: 1.7rem;
             }
