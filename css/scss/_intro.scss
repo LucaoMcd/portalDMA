@@ -16,7 +16,10 @@
     }
     justify-content: center;
     align-content: center;
-    padding: 5% 0 7% 0;
+    padding: 7% 0 7% 0;
+    @include mqm('tablet-wide') {
+        padding-top: 12%;
+    }
     @include mqm('tablet') {
         padding-top: 18%;
     }

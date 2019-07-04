@@ -7,7 +7,7 @@
     &-intro {
         .intro-bg {
             max-width: 100%;
-            padding: 170px 0 50px 0;
+            padding: 7% 0 50px 0;
             @include mqm("tablet") {
                 padding: 25% 0 30px 0;
             }
@@ -56,26 +56,24 @@
         display: flex;
         flex-direction: column;
         .infra-d {
-            padding: 100px 15% 100px 15%;
+            padding: 0px 15% 100px 15%;
             @include mqm('tablet'){
                 padding: 50px 10%;
             }
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            a {
-                img {
-                    max-width: 300px;
-                    @include mqm('phone') {
-                        width: 220px;
-                        margin: {
-                            left: auto;
-                            right: auto;
-                        }
+            img {
+                max-width: 300px;
+                @include mqm('phone') {
+                    width: 220px;
+                    margin: {
+                        left: auto;
+                        right: auto;
                     }
-                    margin-right: 50px;
-                    margin-bottom: 30px;
                 }
+                margin-right: 50px;
+                margin-bottom: 30px;
             }
             &-text {
                 display: flex;
@@ -158,7 +156,6 @@
         @include mqm('desktop'){
             padding: 50px;
         }
-        grid-row-gap: 60px;
         justify-content: center;
         align-items: center;
         
@@ -168,6 +165,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-bottom: 60px;
             h2 {
                 @include tipo-1 ('big', 1, 700, 0);
                 font-size: 3.5;
@@ -308,6 +306,22 @@
             padding: 50px 2px;
         }
         background: $dark-color-1;
+        .owl-nav {
+            max-width: 100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            span {
+                text-align: center;
+                @include tipo-1('big-big', 0,300, white);
+                opacity: 0.5;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
         .title {
             max-width: 350px;
             @incude mqm('phone') {

@@ -21,15 +21,19 @@
     }
     &-description {
         p {
-            @include tipo-1(smaller, 1.5, 300, white);
+            @include tipo-1(small, 1.5, 300, white);
             opacity: .9;
+            @include mqm('tablet-wide'){
+                max-width: 400px; 
+            }
+            text-align: justify;
         }
         max-width: 600px; 
-        align-self: center;
-        padding: 50px;  
-        @include mq('tablet') {   
-            padding: 0 0 0 200px;     
+        @include mqm('tablet-wide'){
+            max-width: 400px; 
         }
+        align-self: center;
+        padding: 0;
         @include mqm('phone') {
             padding: 0 5%;
         }

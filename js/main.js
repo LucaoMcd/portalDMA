@@ -44,6 +44,7 @@ $(document).ready(function () {
         center: true,
         items: 2,
         loop: false,
+        nav: true,
         margin: 50,
         responsiveClass:true,
         responsive:{
@@ -53,7 +54,7 @@ $(document).ready(function () {
             },
             600:{
                 items:2,
-                nav:false
+                nav:true
             },
             1000:{
                 items:3,
