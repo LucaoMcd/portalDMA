@@ -301,7 +301,7 @@
     // Services start here
     
     &-services {
-        padding: 100px 2px;
+        padding: 100px 2px 30px 2px;
         @include mqm('tablet'){
             padding: 50px 2px;
         }
