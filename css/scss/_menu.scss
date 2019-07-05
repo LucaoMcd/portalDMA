@@ -5,13 +5,18 @@
         img {
             margin: 15px;
             width: 40px;
+            @include mqm('phone') {
+                margin: 15px 5px;
+                width: 30px;
+            }
         }
         p {
             padding-left: 15px;
             border-left: 2px solid $primary-color-1;
             @include tipo-1(small, 1.2, false, $primary-color-1);
             @include mqm('phone'){
-                display: none;
+                @include tipo-1(smaller, 1.2, false, $primary-color-1);
+                padding-left: 5px;
             }
         }
     }
@@ -23,6 +28,10 @@
         z-index: 1000;
         top: 3vh;
         left: 5vw;
+        @include mqm('phone') {
+            top: 3.5vh;
+            left: 3vw;
+        }
     }
 }
 
