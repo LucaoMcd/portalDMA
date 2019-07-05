@@ -8,6 +8,9 @@
         h1 {
             @include tipo-1(big-big, 1, 900, white);
             opacity: .3;
+            @include mqm('phone-small') {
+                @include tipo-1(big, 1, 900, white);
+            }
         }
         align-self: flex-start;
         padding: 50px;

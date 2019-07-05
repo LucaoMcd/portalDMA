@@ -160,6 +160,9 @@
                     @include mqm('phone-wide'){
                         width: 320px;
                     }
+                    @include mqm('phone-small'){
+                        width: 250px;
+                    }
                     margin: 50px 0;
                     display: flex;
                     flex-direction: column;
@@ -185,6 +188,9 @@
                         @include mqm('phone-wide'){
                             width: 320px;
                         }
+                        @include mqm('phone-small'){
+                            width: 250px;
+                        }
                         font-weight: 700;
                         color: #cecece;
                         font-family: Georgia, serif;
@@ -209,6 +215,9 @@
                             width: 320px;
                             padding: 0 30px;
                             box-sizing: border-box;
+                        }
+                        @include mqm('phone-small'){
+                            width: 250px;
                         }
                         
                         @include mqm('phone') {
@@ -284,6 +293,9 @@
                         max-width: 350px;
                         flex-direction: column;
                     }
+                    @include mqm('phone-small'){
+                        width: 250px;
+                    }
                             
                     &::before {
                         content: '';
@@ -320,8 +332,14 @@
                             @include mqm('phone') {
                                 width: 320px;
                             }
+                            @include mqm('phone-small'){
+                                width: 250px;
+                            }
                             @include mqm('phone') {
                                 font-size: 7rem;
+                            }
+                            @include mqm('phone-small'){
+                                font-size: 6rem;
                             }
                         }
                         p {
@@ -335,6 +353,9 @@
                             }
                             @include mqm('tablet') {
                                 max-width: 300px;
+                            }
+                            @include mqm('phone-small'){
+                                width: 250px;
                             }
                         }
                     }
@@ -355,14 +376,23 @@
                             @include mqm('phone') {
                                 width: 320px;
                             }
+                            @include mqm('phone-small'){
+                                width: 250px;
+                            }
                             @include mqm('phone') {
                                 font-size: 7rem;
+                            }
+                            @include mqm('phone-small'){
+                                font-size: 6rem;
                             }
                         }
                         p {
                             max-width: 500px;
                             @include mqm('tablet-wide') {
                                 width: 400px;
+                            }
+                            @include mqm('phone-small'){
+                                width: 250px;
                             }
                             @include tipo-1 ('small', 1.4, 300, $dark-color-1);
                             @include mqm('phone') {
@@ -375,9 +405,6 @@
                             order: 1;
                         }
                     }
-//                    .viii {
-//                        transform: translateX(-100px);
-//                    }
                 }
             }
         }

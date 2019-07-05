@@ -20,6 +20,7 @@ $dark-color-2: #3C3C3C;
 // ========== Media queries =========== 
 
 $breakpoints: (
+    "phone-small":  320px,
     "phone":        400px,
     "phone-wide":   480px,
     "phablet":      560px,

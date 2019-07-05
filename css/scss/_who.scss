@@ -33,6 +33,9 @@
                 @include mq('tablet', 'max') {
                     padding: 50px;
                 }
+                @include mqm('phone'){
+                    padding: 20px;
+                }
                 img {
                     max-width: 100%;
                     filter: brightness(90%);
@@ -42,6 +45,9 @@
                 @include tipo-1 ('big', 1.2, 900, white);
                 @include mqm('phone') {
                     font-size: 2rem;
+                }
+                @include mqm('phone-small') {
+                    font-size: 1rem;
                 }
                 align-self: center;
                 margin: 0;

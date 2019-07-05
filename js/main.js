@@ -166,20 +166,20 @@ function initFilterTag(){
 initFilterTag()
 
 
-const small = window.matchMedia('(max-width: 360px)');
+const small = window.matchMedia('(max-width: 300px)');
 const all = document.querySelectorAll('*')
 
 if(small.matches) {
-  console.log('Tela menor que 360px')
+  console.log('Tela menor que 300px')
   all.forEach(e => {
       const eTam = e.getBoundingClientRect()
-      if(eTam.width > 360) {
+      if(eTam.width > 300) {
           console.log(`o elemento ${e} com ${eTam.width}px`)
           console.log(e)
       }
   })
 } else {
-  console.log('Tela maior que 360px')
+  console.log('Tela maior que 300px')
 }
 
 
