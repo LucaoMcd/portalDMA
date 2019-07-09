@@ -110,7 +110,11 @@
             transition: all 1s ease;
             cursor: pointer;
         }
-        .copy.ativo, .credits.ativo {opacity: 1;
+        .credits {
+            top: -100px;
+        }
+        .copy.ativo, .credits.ativo {
+            opacity: 1;
             visibility: visible;
             position: relative;
             top: auto;

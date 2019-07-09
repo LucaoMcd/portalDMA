@@ -90,6 +90,7 @@
     z-index: 1000;
     &-expand {
         transform: translateX(110%);
+        opacity: 0;
         @include shadow;
         position: fixed;
         top: 0;
@@ -100,7 +101,7 @@
                 box-sizing: border-box;
         padding: 50px 70px;
         background: #FFF;
-        transition: all .7s ease;
+        transition: transform .7s ease, opacity 10s ease;
         
         display: grid;
         grid: 
@@ -228,5 +229,7 @@
 }
 
 .animate-menu {
+    opacity: 1;
     transform: translateX(0);
+    transition: transform .7s ease, opacity 0s ease;
 }
