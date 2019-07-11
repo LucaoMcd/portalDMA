@@ -123,17 +123,16 @@ $('.formphp').on('submit', function() {
 const btnToggleCredits = document.querySelector('.footer-copyright')
 const copy = btnToggleCredits.querySelector('.copy')
 const credits = btnToggleCredits.querySelector('.credits')
-const allSearchs = document.querySelectorAll('.pesquisas-content-item')
 
-btnToggleCredits.addEventListener('click', toggleCredits)
-
-function toggleCredits(event) {
+const toggleCredits = (event) => {
+    const toggleCopy = () => {
+        credits.classList.toggle('ativo')
+    }
     copy.classList.toggle('ativo')
     toggleCopy()
 }
-function toggleCopy() {
-    credits.classList.toggle('ativo')
-}
+
+btnToggleCredits.addEventListener('click', toggleCredits)
 
 
 // filtro de pesquisas 
@@ -142,6 +141,7 @@ function initFilterTag(){
     const filtroTag = document.querySelectorAll('[data-tag]') // botões com as tags
     const filtroTagged = document.querySelectorAll('[data-tagged]') // pesquisas com as tags
     const tagForAll = document.querySelectorAll('[data-tag-all]')
+    const allSearchs = document.querySelectorAll('.pesquisas-content-item')
 
     allSearchs.forEach(e => e.classList.add('active')) // iniciar com todas ativas
 
@@ -165,22 +165,164 @@ function initFilterTag(){
 
 initFilterTag()
 
+// Responsive tests
 
-const small = window.matchMedia('(max-width: 300px)');
-const all = document.querySelectorAll('*')
+function initResponsiveTests(){
+    const small = window.matchMedia('(max-width: 300px)');
+    const all = document.querySelectorAll('*')
 
-if(small.matches) {
-  console.log('Tela menor que 300px')
-  all.forEach(e => {
-      const eTam = e.getBoundingClientRect()
-      if(eTam.width > 300) {
-          console.log(`o elemento ${e} com ${eTam.width}px`)
-          console.log(e)
-      }
-  })
-} else {
-  console.log('Tela maior que 300px')
+    if(small.matches) {
+      console.log('Tela menor que 300px')
+      all.forEach(e => {
+          const eTam = e.getBoundingClientRect()
+          if(eTam.width > 300) {
+              console.log(`o elemento ${e} com ${eTam.width}px`)
+              console.log(e)
+          }
+      })
+    } else {
+      console.log('Tela maior que 300px')
+    }
 }
+
+// form cancel
+
+const initFormCancel = () => {
+    const btnCancel = document.querySelector('.btn-cancel')
+    const form = document.querySelector('[data-mask]')
+    const inputs = form.querySelectorAll('input')
+    const textAreaMsg = form.querySelector('textarea')
+    
+    const limpar = (elem) => {
+        elem.value = ''
+        elem.style.border = '1px solid'
+    }
+    
+    const limpaCampos = () => {
+        inputs.forEach(input => {
+            limpar(input)
+        })
+        limpar(textAreaMsg)
+    }
+    
+    btnCancel.addEventListener('click', limpaCampos)
+}
+
+initFormCancel()
+
+// mascara form
+
+function initMascaraForm() {
+    
+    const form = document.querySelector('[data-mask]')
+    const telInput = form.querySelector('[data-tel]')
+    const emailInput = form.querySelector('[data-email]')
+    const btnSubmit = form.querySelector('button')
+    
+    // -------------------------------------------------------------
+
+    const validaEmail = (e) => {
+        
+        const email = e.target.value
+        
+        const valid = (email) => {
+            const emailRegex = /[\w-.]+@[\w-]+[.][\w-.]+/gi
+            return email.match(emailRegex)
+        }
+        
+        if(email) {
+            if(valid(email)) {
+                emailInput.style.border = '1px solid #5CC25F'
+            } else {
+                emailInput.style.border = '1px solid #FF2400'
+            }
+        } else {
+                emailInput.style.border = '1px solid'
+        }
+        
+        emailInput.addEventListener('keyup', validaEmail)
+    }
+    
+    emailInput.addEventListener('change', validaEmail)
+    
+    // -------------------------------------------------------------
+    
+    const initNumMask = (e) => {
+        
+        const msg = e.target.value
+        
+        const addTelMask = (msg) => {
+            const regexDigits = /\D/g
+            const onlyDigits = msg.replace(regexDigits, '')
+            const regexParenteses = /^(\d{2})(\d+)/g
+            const newMsg = onlyDigits.replace(regexParenteses, '($1) $2')
+            const regexFormat = /(\d)(\d{4})$/g            
+            const finalMsg = newMsg.replace(regexFormat, '$1-$2')
+
+            telInput.value = finalMsg
+
+            return newMsg
+        }
+        if(msg.length >= 2)
+            return addTelMask(msg)
+    }
+    
+    telInput.addEventListener('keyup', initNumMask)
+
+    // ------------------------------------------------------------
+
+    const validaNum = (e) => { 
+        
+        const num = e.target.value
+        
+        const validaNum = (num) => {
+            const regexLimpaDigitos = /\D/g
+            const numClean = num.replace(regexLimpaDigitos, '')
+            return numClean.length === 11 
+        }
+
+        const valida = (num) => {
+            if(num) {
+                if(validaNum(num)){
+                    telInput.style.border = '1px solid #5CC25F'
+                } else {
+                    telInput.style.border = '1px solid #FF2400'
+                    btnSubmit.addEventListener('click', (e) => e.preventDefault())
+                }
+            } else {
+                telInput.style.border = '1px solid'
+            }
+        }
+        
+        valida(num)
+    }
+                              
+    telInput.addEventListener('change', validaNum)
+    
+    // -------------------------------------------------------------
+}
+
+initMascaraForm()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
