@@ -1,4 +1,5 @@
 export default function MenuAnimation() {
+    
     const menu_expand = document.querySelector(".menu-expand");
     const toggle_btn = document.querySelector(".menu-icon-bg");
     const close_btn = document.querySelector(".menu-expand-close");
@@ -11,4 +12,5 @@ export default function MenuAnimation() {
         "use strict";
         menu_expand.classList.remove('animate-menu');
     });
+    
 }

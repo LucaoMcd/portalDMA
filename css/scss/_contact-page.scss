@@ -403,6 +403,13 @@
                     border-radius: 5px;
                     width: 100%;
                     background: transparent;
+                    &:focus {
+                        box-shadow: 0 0 0 0;
+                        border: 0 none;
+                        outline: 0;
+                        border: 2px solid;
+                        background: rgba(256, 256, 256, .06);
+                    }
                 }
                 textarea {
                     box-sizing: border-box;
@@ -419,6 +426,13 @@
                     width: 100%;
                     resize: none;
                     background: transparent;
+                    &:focus {
+                        box-shadow: 0 0 0 0;
+                        border: 0 none;
+                        outline: 0;
+                        border: 2px solid;
+                        background: rgba(256, 256, 256, .06);
+                    }
                 }
                 
             }
