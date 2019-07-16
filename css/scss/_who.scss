@@ -71,10 +71,10 @@
                     position: relative;
                     right: 150px;
                     img {
-                        filter: brightness(70%);
+                        filter: brightness(90%);
                         transition: all 1.5s ease;
                         &:hover {
-                            filter: brightness(90%);
+                            filter: brightness(100%);
                             transform: scale(1.05);
                         }
                     }
