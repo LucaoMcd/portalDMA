@@ -329,7 +329,7 @@
         }
         .title {
             max-width: 350px;
-            @incude mqm('phone') {
+            @include mqm('phone') {
                 margin: 0 auto;
             }
             margin: 0 auto 60px auto;
@@ -434,71 +434,54 @@
     
     
     
-    // Services start here
+    // Documents start here
     
-    &-smash {
-        padding: 100px 15%;
+    &-documents {
+        box-sizing: border-box;
+        padding: 100px 5%;
+        width: 100%;
         @include mqm('tablet') {
             padding: 50px 15%;
         }
-        p {
-            text-align: center;
-            max-width: 500px;
-            margin: 0 auto;
-            @include tipo-1 ('medium', 1.5, 300, $dark-color-1);
-            @include mqm('tablet') {
-                @include tipo-1 ('small', 1.5, 300, $dark-color-1);
+
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-end;
+
+        h1 {
+            margin: 0;
+            margin-right: 40px;
+            align-self: flex-start;
+            @include tipo-1('big', 1, 500, $dark-color-1)
+        }
+        div {
+            margin-left: 40px;
+            ul {
+                padding-top: 0px;
+                li {
+                    cursor: pointer;
+                    opacity: .7;
+                    transition: opacity .2s ease;
+                    @include tipo-1('small', 1.6, 300, $dark-color-1);
+                    display: flex;
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        background: url('../img/icons/download.png') no-repeat center;
+                        background-size: cover;
+                        margin-right: 10px;
+                    }
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
             }
         }
     }
     
-    // Services end here
+    // Documents end here
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
