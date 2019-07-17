@@ -2,3 +2,5 @@ node_modules
 package.json
 package-lock.json
 js/modules
+js/main1.js
+webpack.config.js
