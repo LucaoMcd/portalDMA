@@ -8,10 +8,10 @@ import FormCancel from "./form-cancel.js"
 import MascaraForm from "./mascara-form.js"
 
 MenuAnimation()
-MascaraForm()
 FilterByTag()
-FormCancel()
 Carousel()
 Footer()
 Slides()
 Form()
+FormCancel()
+MascaraForm()

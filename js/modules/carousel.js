@@ -1,4 +1,7 @@
+import owlCarousel from "../libs/owl.carousel.min.js"
+
 export default function Carousel() {
+    console.log('carousel')
     $(document).ready(function () {
         $('.owl-carousel').owlCarousel({
             loop: true,
