@@ -461,22 +461,24 @@
             ul {
                 padding-top: 0px;
                 li {
-                    cursor: pointer;
-                    opacity: .7;
-                    transition: opacity .2s ease;
-                    @include tipo-1('small', 1.6, 300, $dark-color-1);
-                    display: flex;
-                    &::before {
-                        content: '';
-                        display: block;
-                        width: 20px;
-                        height: 20px;
-                        background: url('../img/icons/download.png') no-repeat center;
-                        background-size: cover;
-                        margin-right: 10px;
-                    }
-                    &:hover {
-                        opacity: 1;
+                    a {
+                        cursor: pointer;
+                        opacity: .7;
+                        transition: opacity .2s ease;
+                        @include tipo-1('small', 1.6, 300, $dark-color-1);
+                        display: flex;
+                        &::before {
+                            content: '';
+                            display: block;
+                            width: 20px;
+                            height: 20px;
+                            background: url('../img/icons/download.png') no-repeat center;
+                            background-size: cover;
+                            margin-right: 10px;
+                        }
+                        &:hover {
+                            opacity: 1;
+                        }
                     }
                 }
             }
