@@ -1,8 +1,8 @@
 .who {
     max-width: 100%;
     min-height: 100vh;
-    // background: url('../img/bg-home.png');
-    background: $dark-color-1;
+    background: url('../img/bg-home.png');
+    // background: $dark-color-1;
     
     &-items {
         @include mq('tablet') {
@@ -18,13 +18,13 @@
                 padding: 50px 10px 0 10px;
             }
             max-width: 100%;
-            // @include tipo-1 ('big', 1.1, 900, $dark-color-1);   
-            @include tipo-1 ('big', 1.1, 900, white);  
+            @include tipo-1 ('big', 1.1, 900, $dark-color-1);   
+            // @include tipo-1 ('big', 1.1, 900, white);  
             @include mq('tablet') {
-                // @include tipo-1 ('big-big', 1.2, 900, $dark-color-1);   
-                @include tipo-1 ('big-big', 1.2, 900, white);           
+                @include tipo-1 ('big-big', 1.2, 900, $dark-color-1);   
+                // @include tipo-1 ('big-big', 1.2, 900, white);           
             }
-            opacity: .3;
+            opacity: 1;
         }
         
         &-content {
@@ -45,8 +45,8 @@
                 }
             }
             h3 {
-                //  @include tipo-1 ('big', 1.2, 900, $dark-color-1);
-                @include tipo-1 ('big', 1.2, 900, white);
+                @include tipo-1 ('big', 1.2, 900, $dark-color-1);
+                //  @include tipo-1 ('big', 1.2, 900, white);
                 @include mqm('phone') {
                     font-size: 2rem;
                 }
@@ -87,8 +87,11 @@
                     position: absolute;
                     right: 60px;
                     flex-shrink: 0;
-                    // @include tipo-1 ('big-big', 1.2, 900, $dark-color-1);
-                    @include tipo-1 ('big-big', 1.2, 900, white);
+                    display: inline-block;
+                    padding: 10px 20px;
+                    background: white;
+                    @include tipo-1 ('big-big', 1.2, 900, $dark-color-1);
+                    // @include tipo-1 ('big-big', 1.2, 900, white);
                     font-size: 4rem;
                     @include mqm('tablet-wide') {
                         font-size: 3rem;

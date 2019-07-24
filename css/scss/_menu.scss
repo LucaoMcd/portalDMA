@@ -175,13 +175,13 @@
             li {
                 text-align: center;
                 margin: 10px 0;
-                height: 50px;
+                height: 40px;
                 @include mqm('phone-wide') {
                     height: 30px;
                 }
                 a {
                     opacity: .9;
-                    font-size: 2rem;
+                    font-size: 1.8rem;
                     line-height: 1.1;
                     font-weight: 300;
                     @include mqm('phone-wide') {
@@ -190,7 +190,7 @@
                     }
                     transition: all .2s ease;
                     &:hover {
-                        font-size: 2.2rem;
+                        font-size: 2rem;
                         @include mqm('phone-wide') {
                             font-size: 1.7rem;
                             opacity: 1;
@@ -198,7 +198,7 @@
                         color: #54C51C;
                     }
                     &.menu-active {
-                        font-size: 2.2rem;
+                        font-size: 2rem;
                         @include mqm('phone-wide') {
                             font-size: 1.7rem;
                             opacity: 1;

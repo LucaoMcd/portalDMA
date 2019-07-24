@@ -12,5 +12,4 @@ export default function MenuAnimation() {
         "use strict";
         menu_expand.classList.remove('animate-menu');
     });
-    
 }

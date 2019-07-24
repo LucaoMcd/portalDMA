@@ -7,6 +7,7 @@
     display: grid;
     grid:
         "title img"
+        "scroll scroll"
         / 1fr 1fr;
     @include mqm('tablet') {
         grid:
@@ -82,8 +83,10 @@
         .folhas-bg {
             position: absolute;
             top: -100%;
+            display: flex;
+            justify-content: flex-end;
             img {
-                max-width: 100%;
+                max-width: 90%;
             }
             @include mqm('tablet-wide') {
                 top: -80%;
@@ -105,12 +108,20 @@
             max-width: 80%;
         }
         img {
-            max-width: 100%;
+            max-width: 90%;
             @include mqm('tablet') {
                 max-width: 80%;
+                margin: 0 auto;
             }
-            margin: 0 auto;
+            margin: 0 0;
         }
+    }
+    .to-scroll {
+        @include mqm('tablet') {
+            display: none;
+        }
+        grid-area: scroll;
+        justify-self: center;
     }
 }
 

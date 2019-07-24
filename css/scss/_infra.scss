@@ -301,7 +301,7 @@
     // Services start here
     
     &-services {
-        padding: 100px 2px 30px 2px;
+        padding: 100px 5% 60px 5%;
         @include mqm('tablet'){
             padding: 50px 2px;
         }
@@ -352,7 +352,7 @@
         
         .services {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             @include mqm('tablet') {
                 grid-template-columns: 1fr 1fr;
             }

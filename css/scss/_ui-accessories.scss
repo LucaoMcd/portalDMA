@@ -42,3 +42,94 @@
         padding: 5px 20px;
     }
 }
+
+// scroll icon
+
+.to-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: .7;
+
+    .scroll-icon {
+        width: 15px;
+        height: 30px;
+        border: 2px solid rgba(0, 0, 0, .5);
+        border-radius: 8px;
+        &::after {
+            content: '';
+            display: block;
+            transform: translate3d(6.5px, 5px, 0);
+            border-radius: 1px;
+            width: 2px;
+            height: 7px;
+            background: rgba(0, 0, 0, .7);
+
+            -webkit-animation-name: scrollAnimation; /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+            animation-name: scrollAnimation;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in;
+        
+            /* Safari 4.0 - 8.0 */
+            @-webkit-keyframes scrollAnimation {
+                0% {transform: translate3d(6.5px, 5px, 0);}
+                100% {transform: translate3d(6.5px, 15px, 0);}
+            }
+        
+            /* Standard syntax */
+            @keyframes scrollAnimation {
+                0% {transform: translate3d(6.5px, 5px, 0);}
+                100% {transform: translate3d(6.5px, 15px, 0);}
+            }
+        }
+    }
+    p {
+        margin-top: 10px;
+        @include tipo-1('smaller', 1, 500, $dark-color-1);
+    }
+}
+
+.scroll-to-top {
+    position: fixed;
+    top: 90%;
+    right: 5vw;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    .to-top-btn {
+        width: 35px;
+        height: 35px;
+        background: $dark-color-2;
+        border-radius: 50px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all .2s ease;
+        &:hover {
+            transform: translate3d(0, -3px, 0);
+        }
+        .top-arrow {
+            width: 10px;
+            height: 3px;
+            background: white;
+            border-radius: 5px;
+            transform: translate3d(4px, 0, 0) rotate(25deg);
+            &::after{
+                content: '';
+                display: block;
+                width: 10px;
+                height: 3px;
+                border-radius: 5px;
+                background: white;
+                transform: translate3d(-7px, 3.5px, 0) rotate(-50deg);
+            }
+        }
+    }
+}
