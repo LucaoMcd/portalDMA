@@ -225,10 +225,11 @@
                     justify-content: center;
                     align-items: center;
                     &-item {
-                        // transform: translate3d(0, -400px, 0);
+                        height: 250px;
                         width: 1000px;
                         @include mqm('tablet-wide'){
                             width: 760px;
+                            height: 200px;
                         }
                         @include mqm('tablet'){
                             width: 600px;
@@ -239,6 +240,7 @@
                         }
                         @include mqm('phone-wide'){
                             width: 320px;
+                            height: 150px;
                         }
                         @include mqm('phone-small'){
                             width: 250px;
