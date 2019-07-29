@@ -353,10 +353,13 @@
         .services {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
-            @include mqm('tablet') {
+            @include mqm('tablet-wide') {
                 grid-template-columns: 1fr 1fr;
             }
-            @include mqm('phone') {
+            @include mqm('tablet-small') {
+                justify-items: center;
+                align-content: center;
+                grid-row-gap: 60px;
                 grid-template-columns: 1fr;
             }
             &-arrow {

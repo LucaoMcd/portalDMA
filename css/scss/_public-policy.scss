@@ -36,6 +36,10 @@
                 padding: 0;
                 margin: 0;
                 flex-shrink: 0;
+                @include mqm('phone') {
+                    max-width: 100%;
+                    padding: 0 5% 0 5%;
+                }
             }
         }
     }
@@ -68,6 +72,7 @@
                 h2 {
                     @include tipo-1 ('big', 1, 700, 0);
                     font-size: 3.5;
+                    text-align: center;
                 }
                 .folha {
                     margin: {
@@ -95,7 +100,7 @@
                     max-width: 100%;
                     background: white;
                     text-align:justify;
-                    @include tipo-1 ('smaller', 1.6, 300, false)
+                    @include tipo-1 ('smaller', 1.6, 300, false);
                     @include mqm('phone') {
                         font-size: 1rem;
                     }
@@ -211,24 +216,21 @@
                     }
                     p {
                         width: 600px;
+                        @include tipo-1 ('small', 1.6, 300, #fff);
+                        text-align: center;
+                        transform: translateY(-50%);
                         @include mqm('tablet-small'){
                             width: 460px;
                         }
                         @include mqm('phone-wide'){
-                            width: 320px;
+                            max-width: 360px;
                             padding: 0 30px;
                             box-sizing: border-box;
+                            @include tipo-1 ('smaller', 1.6, 300, #fff);
                         }
                         @include mqm('phone-small'){
                             width: 250px;
                         }
-                        
-                        @include mqm('phone') {
-                            font-size: 1rem;
-                        }
-                        @include tipo-1 ('small', 1.6, 300, #fff);
-                        text-align: center;
-                        transform: translateY(-50%);
                     }
                 }
             }

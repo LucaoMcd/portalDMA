@@ -45,7 +45,6 @@
                 }
             }
             h3 {
-                //  @include tipo-1 ('big', 1.2, 900, $dark-color-1);
                 @include tipo-1 ('big', 1.2, 900, white);
                 @include mqm('phone') {
                     font-size: 2rem;
@@ -56,6 +55,7 @@
                 align-self: center;
                 margin: 0;
                 padding: 0;
+                text-align: center;
             }
             // tablet+
             @include mq('tablet') {
@@ -87,7 +87,6 @@
                     position: absolute;
                     right: 60px;
                     flex-shrink: 0;
-                    // @include tipo-1 ('big-big', 1.2, 900, $dark-color-1);
                     @include tipo-1 ('big-big', 1.2, 900, white);
                     font-size: 4rem;
                     @include mqm('tablet-wide') {
@@ -98,6 +97,7 @@
                     }
                     text-transform: uppercase;
                     z-index: 1;
+                    text-align: center;
                 }
                 // primeiro item
                 &.manager {

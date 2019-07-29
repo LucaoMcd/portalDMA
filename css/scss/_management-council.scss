@@ -1,57 +1,13 @@
 .politicas-publicas {
     .management-council {
         
-        // intro start here
-        
-        &-intro {
-            .intro-bg {
-                max-width: 100%;
-                padding: 7% 0 50px 0;
-                @include mqm("tablet") {
-                    padding: 25% 0 30px 0;
-                }
-                text-align: center;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                h1 {
-                    @include tipo-1('big-big', 1, 500, $dark-color-1);
-                    font-size: 3rem;
-                    padding: 0;
-                    margin-bottom: 10px;
-                    &::after {
-                        content: '';
-                        display: block;
-                        background: $dark-color-1;
-                        width: 20%;
-                        height: 4px;
-                        margin: 10px auto;
-                    }
-                }
-                p {
-    //                @include tipo-1('medium', 1.5, 300, white);
-                    @include tipo-1('small', 1.5, 300, $dark-color-1);
-                    font-size: 1rem;
-                    padding: 0;
-                    margin: 0;
-                    flex-shrink: 0;
-                }
-            }
-        }
-        
-        // intro end here
-        
-        
-        
-        
         
         // motivation start here
         
         &-description {
-            padding: 20px 10% 50px 10%;
+            padding: 20px 0 50px 0;
             @include mqm('tablet-wide'){
-                padding: 50px 5% 50px 5%;
+                padding: 50px 0 50px 0;
             }
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -121,7 +77,8 @@
                             padding: 0 5% 0 0;
                         }
                         @include mqm('phone') {
-                            max-width: 260px;
+                            max-width: 100%;
+                            padding: 0 5% 0 5%;
                         }
                         text-align: justify;
                     }
@@ -239,8 +196,8 @@
                             margin: 0;
                         }
                         @include mqm('phone-wide'){
-                            width: 320px;
-                            height: 150px;
+                            max-width: 360px;
+                            height: 200px;
                         }
                         @include mqm('phone-small'){
                             width: 250px;
@@ -290,11 +247,15 @@
                         }
                         p {
                             width: 600px;
+                            @include tipo-1 ('small', 1.6, 300, #fff);
+                            text-align: center;
+                            transform: translateY(-50%);
                             @include mqm('tablet-small'){
                                 width: 460px;
                             }
                             @include mqm('phone-wide'){
-                                width: 320px;
+                                max-width: 400px;
+                                @include tipo-1 ('smaller', 1.6, 300, #fff);
                                 padding: 0 30px;
                                 box-sizing: border-box;
                             }
@@ -302,13 +263,6 @@
                                 width: 250px;
                                 padding: 0;
                             }
-                            
-                            @include mqm('phone') {
-                                font-size: 1rem;
-                            }
-                            @include tipo-1 ('small', 1.6, 300, #fff);
-                            text-align: center;
-                            transform: translateY(-50%);
                         }
                     }
                 }
