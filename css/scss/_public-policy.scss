@@ -223,7 +223,7 @@
                             width: 460px;
                         }
                         @include mqm('phone-wide'){
-                            max-width: 360px;
+                            max-width: 320px;
                             padding: 0 30px;
                             box-sizing: border-box;
                             @include tipo-1 ('smaller', 1.6, 300, #fff);
@@ -295,7 +295,7 @@
                     }
                     
                     @include mqm('phone') {
-                        max-width: 350px;
+                        max-width: 320px;
                         flex-direction: column;
                     }
                     @include mqm('phone-small'){
