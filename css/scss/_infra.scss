@@ -149,7 +149,7 @@
     
     // Sectors start here
     
-    &-sectors {
+    &-in {
         display: grid;
         grid-template-columns: 1fr;
         padding: 70px 0 100px 0;
@@ -162,13 +162,13 @@
         .title {
             width: 350px;
             @include mqm('phone') {
-                width: 300px;
+                width: 300;
             }
             margin: 0 auto;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-bottom: 60px;
+            margin-bottom: 30px;
             h2 {
                 @include tipo-1 ('big', 1, 700, 0);
                 font-size: 3.5;
@@ -183,113 +183,48 @@
             }
         }
         
-        .selectors {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            padding: 0 15%;
-            @include mqm('desktop'){
-                padding: 0 10%;
-            }
-            @include mqm('tablet-wide'){
-                display: none;
-            }
-            &-item {
-                margin: 0 auto;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                max-width: 250px;
-                height: 80%;
-                border-radius: 15px;
-                overflow: hidden;
-                cursor: pointer;
-                transition: all .3s ease;
-                &:hover {
-                    transform: scale(1.05);
+        .in-items {
+            display: flex;
+            flex-direction: column;
+            .in-item {
+                display: grid;
+                margin: 30px auto;
+                &:nth-child(1n) {
+                    grid-template: 
+                    "img title" 60px
+                    "img description" 70px
+                    / 120px 600px;
                 }
+                &:nth-child(2n) {
+                    grid-template: 
+                    "title img" 60px
+                    "description img" 70px
+                    / 600px 120px;
+                }
+                grid-column-gap: 45px;
+
                 img {
-                    max-width: 100%;
-                    filter: brightness(80%);
+                    grid-area: img;
+                    width: 120px;
+                    align-self: end;
                 }
                 h3 {
-                    position: relative;
-                    top: -180px;
-                    @include tipo-1 ('medium', 1, 500, white);
-                    letter-spacing: 20px;
-                    padding: 7px 0 7px 20px;
-                    border: 2px solid white;
-                    border-radius: 7px;
+                    grid-area: title;
+                    align-self: end;
+                    padding-bottom: 10px;
+                    @include tipo-1('medium', 1, 500, $dark-color-1)
                 }
-            }
-        }
-
-        [data-target] {
-            opacity: 0;
-            visibility: hidden;
-            transform: translate3d(-50px, 0, 0);
-            position: absolute;
-            top: 0;
-        }
-
-        [data-target].active {
-            opacity: 1;
-            visibility: visible;
-            transition: .3s;
-            position: relative;
-            top: auto;
-            transform: translate3d(0px, 0, 0);
-        }
-
-        [data-click].active {
-            transform: scale(1.05);
-        }
-        
-        .description {
-            @include mqm('tablet-wide'){
-                display: none;
-            }
-            &-item {
-                max-width: 600px;
-                margin: 0 auto;
-                padding: 30px 50px 45px 50px;
-                @include shadow;
-                background: white;
-                text-align: center;
-                border-radius: 15px;
-                p {
-                    @include tipo-1 ('small', 1.6, 300, $dark-color-1);
-                    margin-bottom: 40px;
-                    opacity: .9;
+                .description {
+                    grid-area: description;
+                    background: white;
+                    @include shadow;
+                    border: 1px solid rgba(0, 0, 0, .1);
+                    border-radius: 10px;
+                    padding: 10px 20px;
+                    p {
+                        @include tipo-1('smaller', 1.5, 300, $dark-color-1)
+                    }
                 }
-            }
-        }
-    }
-    
-    .mobile-description {
-        display: none;
-        @include mqm('tablet-wide'){
-            display: block;
-        }
-        text-align: center;
-        max-width: 100%;
-        h3 {
-            text-align: center;
-            @include tipo-1('medium', 1, 700, $dark-color-2);
-            letter-spacing: 20px;
-            padding-bottom: 7px;
-            padding-left: 20px;
-            border-bottom: 2px solid $dark-color-2;
-            display: inline-block;
-            margin: 30px 0;
-        }
-        p {
-            @include tipo-1('small', 1.4, 300, $dark-color-1);
-            margin-bottom: 10px;
-            opacity: .9;
-            max-width: 100%;
-            @include mqm('phone'){
-                max-width: 280px;
-                @include center;
             }
         }
     }
