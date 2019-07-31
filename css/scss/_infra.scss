@@ -162,7 +162,7 @@
         .title {
             width: 350px;
             @include mqm('phone') {
-                width: 300;
+                width: 320px;
             }
             margin: 0 auto;
             display: flex;
@@ -172,6 +172,9 @@
             h2 {
                 @include tipo-1 ('big', 1, 700, 0);
                 font-size: 3.5;
+                @include mqm('phone') {
+                    @include tipo-1 ('medium', 1.6, 700, 0);
+                }
             }
             .folha {
                 margin: {
@@ -202,17 +205,56 @@
                     / 600px 120px;
                 }
                 grid-column-gap: 45px;
+                @include mqm('tablet-wide') {
+                    &:nth-child(1n) {
+                        grid-template: 
+                        "img title" 60px
+                        "img description" 90px
+                        / 120px 400px;
+                    }
+                    &:nth-child(2n) {
+                        grid-template: 
+                        "title img" 60px
+                        "description img" 90px
+                        / 400px 120px;
+                    }
+                    grid-column-gap: 35px;
+                }
+                @include mqm('tablet-small') {
+                    &:nth-child(1n) {
+                        grid-template: 
+                        "img" 80px
+                        "title" 60px
+                        "description" 150px
+                        / 300px ;
+                    }
+                    &:nth-child(2n) {
+                        grid-template: 
+                        "img" 80px
+                        "title" 60px
+                        "description" 150px
+                        / 300px ;
+                    }
+                    justify-items: center;
+                }
 
                 img {
                     grid-area: img;
                     width: 120px;
                     align-self: end;
+                    @include mqm('tablet-small') {
+                        width: 80px;
+                    }
                 }
                 h3 {
                     grid-area: title;
                     align-self: end;
                     padding-bottom: 10px;
                     @include tipo-1('medium', 1, 500, $dark-color-1)
+                    @include mqm('tablet-small') {
+                        @include tipo-1('small', 1, 500, $dark-color-1);
+                        text-align: center;
+                    }
                 }
                 .description {
                     grid-area: description;
