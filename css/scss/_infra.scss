@@ -321,32 +321,13 @@
                 grid-row-gap: 60px;
                 grid-template-columns: 1fr;
             }
-            &-arrow {
-                display: grid;
-                grid: 
-                    "arrow nome";
-                align-content: center;
-                justify-content: center;
-                align-items: center;
-                grid-column-gap: 10px;
-                height: 370px;
-                span {
-                    grid-area: arrow;
-                    font-size: 4rem;
-                    font-weight: bold;
-                    color: white;
-                    display: block;
-                }
-                p {
-                    grid-area: nome;
-                    font-size: 3rem;
-                    font-weight: bold;
-                    color: white;
-                }
-            }
             &-item {
                 max-width: 300px;
-                padding: 50px 60px;
+                padding: 50px 5%;
+                @include mqm('tablet-wide') {
+                    padding: 10px;
+                    margin: 20px 50px;
+                }
                 @include mqm('tablet') {
                     padding: 10px;
                     margin: 0 50px;
@@ -364,6 +345,15 @@
                     background: white;
                     border-radius: 100px;
                     margin-bottom: 50px;
+                    @include mqm('desktop') {
+                        width: 160px;
+                        height: 160px;
+                        margin-bottom: 30px;
+                    }
+                    @include mqm('tablet-wide') {
+                        width: 180px;
+                        height: 180px;
+                    }
                     @include mqm('phone-wide') {
                         margin-bottom: 30px;
                     }
@@ -379,6 +369,9 @@
                     align-items: center;
                     h3 {
                         @include tipo-1 ('medium', 1, 500, white);
+                        @include mqm('desktop') {
+                            @include tipo-1 ('small', 1, 500, white);
+                        }
                         margin-bottom: 20px;
                         opacity: .9;
                     }
