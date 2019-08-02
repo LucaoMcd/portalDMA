@@ -99,7 +99,7 @@
         -webkit-box-sizing: border-box;
            -moz-box-sizing: border-box;
                 box-sizing: border-box;
-        padding: 50px 70px;
+        padding: 30px 50px;
         background: #FFF;
         transition: transform .7s ease, opacity 10s ease;
         
@@ -108,7 +108,7 @@
             "btn-close" 40px
             "logo" 150px
             "nav" 1fr
-            "cta" 150px
+            "cta" 100px
             "media" 80px
         /   1fr;
         justify-content: center;
@@ -116,10 +116,11 @@
         @include mqm('phone-wide') {
             padding: 20px;
             grid: 
-                "logo btn-close" 1fr
-                "nav nav" 4fr
-                "cta cta" 1fr
-                "media media" 1fr
+            "btn-close" 40px
+            "logo" 150px
+            "nav" 1fr
+            "cta" 100px
+            "media" 80px
             /   1fr;
             width: 90%;
         }
@@ -153,17 +154,11 @@
         &-logo {
             grid-area: logo;
             justify-self: center;
-            @include mqm('phone-wide') {
-                justify-self: start;
-            }
             a {
                 img {
                     width: 100px;
                     @include mqm('tablet') {
                         width: 70px;
-                    }
-                    @include mqm('phone-wide') {
-                        width: 50px;
                     }
                 }
             }
@@ -171,38 +166,24 @@
         &-nav {
             grid-area: nav;
             justify-self: center;
-            width: 300px;
             li {
                 text-align: center;
                 margin: 10px 0;
-                height: 40px;
-                @include mqm('phone-wide') {
-                    height: 30px;
-                }
+                width: 250px;
                 a {
                     opacity: .9;
-                    font-size: 1.8rem;
                     line-height: 1.1;
                     font-weight: 300;
-                    @include mqm('phone-wide') {
-                        font-size: 1.5rem;
-                        opacity: 1;
-                    }
+                    @include tipo-1('medium', 1.4, 300, $dark-color-1);
                     transition: all .2s ease;
                     &:hover {
-                        font-size: 2rem;
-                        @include mqm('phone-wide') {
-                            font-size: 1.7rem;
-                            opacity: 1;
-                        }
+                        @include tipo-1('medium', 1.4, 500, $dark-color-1);
+                        opacity: 1;
                         color: #54C51C;
                     }
                     &.menu-active {
-                        font-size: 2rem;
-                        @include mqm('phone-wide') {
-                            font-size: 1.7rem;
-                            opacity: 1;
-                        }
+                        @include tipo-1('medium', 1.4, 500, $dark-color-1);
+                        opacity: 1;
                         color: #54C51C;
                     }
                 }

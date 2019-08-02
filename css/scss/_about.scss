@@ -29,7 +29,7 @@
             @include mqm('tablet-wide'){
                 max-width: 400px; 
             }
-            text-align: justify;
+            text-align: right;
         }
         max-width: 600px; 
         @include mqm('tablet-wide'){
