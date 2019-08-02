@@ -1,0 +1,70 @@
+.campanha {
+  position: fixed;
+  left: 1vw;
+  top: calc(92.5% - 130px);
+  &-bg {
+    width: 400px;
+    height: 130px;
+    background: white;
+    border: 1px solid #DDDDDD;
+    border-radius: 10px;
+    padding: 20px 20px;
+    align-items: center;
+    @include shadow;
+    display: grid;
+    grid-template: 
+    "img title close" 1fr
+    "img description close" 2fr
+    / 100px 1fr 20px;
+    grid-column-gap: 20px;
+    img {
+      grid-area: img;
+      width: 100px;
+    }
+    .campanha-title {
+      grid-area: title;
+      @include tipo-1 ('small', 1.2, 500, $dark-color-1);
+      opacity: .9;
+      max-width: 100%;
+    }
+    .campanha-description {
+      grid-area: description;
+      @include tipo-1 ('smaller', 1.5, 300, $dark-color-1);
+      opacity: .8;
+      max-width: 100%;
+    }
+    .campanha-btn-close {
+      grid-area: close;
+      align-self: start;
+      padding-left: 10px;
+      cursor: pointer;
+      span {
+        display: block;
+        width: 3px;
+        height: 20px;
+        border-radius: 5px;
+        background: $dark-color-2;
+        transform: rotate(45deg);
+        &::after {
+            content: '';
+            display: block;
+            width: 3px;
+            height: 20px;
+            border-radius: 5px;
+            background: $dark-color-2;
+            transform: rotate(90deg);
+            position: relative;
+        }
+      }
+    }
+  }
+}
+
+
+// <section class="campanha">
+//     <div class="campanha-bg">
+//         <img src="img/logo-of.png" alt="Logo campanha">
+//         <span>Coleta seletiva solidária da UFRN</span>
+//         <p>Cada 100 toneladas de <b>plástico</b> reciclado evitam a extração de uma tonelada de <b>petróleo</b>.</p>
+//     </div>
+// </section>

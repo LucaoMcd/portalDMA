@@ -154,12 +154,21 @@
         &-logo {
             grid-area: logo;
             justify-self: center;
+            align-self: center;
             a {
+                display: flex;
+                flex-direction: column;
                 img {
                     width: 100px;
                     @include mqm('tablet') {
                         width: 70px;
                     }
+                }
+                span {
+                    @include tipo-1 ('small', 1.2, 500, $dark-color-1);
+                    opacity: .9;
+                    text-align: center;
+                    max-width: 250px;
                 }
             }
         }
