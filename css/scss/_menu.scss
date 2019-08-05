@@ -106,7 +106,7 @@
         display: grid;
         grid: 
             "btn-close" 40px
-            "logo" 150px
+            "logo" 200px
             "nav" 1fr
             "cta" 100px
             "media" 80px
@@ -155,6 +155,7 @@
             grid-area: logo;
             justify-self: center;
             align-self: center;
+            padding-top: 20px;
             a {
                 display: flex;
                 flex-direction: column;
@@ -169,6 +170,7 @@
                     opacity: .9;
                     text-align: center;
                     max-width: 250px;
+                    margin-bottom: 30px;
                 }
             }
         }

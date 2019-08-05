@@ -9,13 +9,14 @@ import ScrollToTop from "./scroll-to-top.js"
 import ResponsiveTests from "./responsive-tests.js"
 import ClosePopup from "./popup-campanha.js"
 
+
 MenuAnimation()
 ScrollToTop()
+Slides()
 FilterByTag()
 ResponsiveTests()
 ClosePopup()
 Footer()
-Slides()
 Form()
 FormCancel()
 MascaraForm()
