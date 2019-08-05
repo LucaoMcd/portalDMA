@@ -19,5 +19,7 @@ export default function MenuAnimation() {
         console.log(vh)
     }
 
+    heightMenu()
+
     window.addEventListener('resize', heightMenu)
 }
