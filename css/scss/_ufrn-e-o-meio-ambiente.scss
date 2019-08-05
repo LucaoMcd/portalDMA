@@ -1,0 +1,48 @@
+.ufrn {
+    
+    background: url('../img/bg-home.png');
+    
+    // intro start here
+    
+    &-intro {
+        .intro-bg {
+            max-width: 100%;
+            padding: 7% 0 50px 0;
+            @include mqm("tablet") {
+                padding: 25% 0 30px 0;
+            }
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                @include tipo-1('big-big', 1, 500, $dark-color-1);
+                font-size: 3rem;
+                @include mqm('phone-wide') {
+                    font-size: 2rem;
+                }
+                padding: 0;
+                margin-bottom: 10px;
+                &::after {
+                    content: '';
+                    display: block;
+                    background: $dark-color-1;
+                    width: 20%;
+                    height: 4px;
+                    margin: 10px auto;
+                }
+            }
+            p {
+                @include tipo-1('small', 1.5, 300, $dark-color-1);
+                font-size: 1rem;
+                padding: 0;
+                margin: 0;
+                flex-shrink: 0;
+            }
+        }
+    }
+    
+    // intro end here
+
+}
