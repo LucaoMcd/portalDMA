@@ -120,8 +120,8 @@
             "btn-close" 40px
             "logo" 110px
             "nav" 1fr
-            "cta" 80px
-            "media" 80px
+            "cta" 70px
+            "media" 70px
             /   1fr;
             width: 100%;
         }
@@ -164,10 +164,14 @@
                     width: 100px;
                     @include mqm('tablet') {
                         width: 70px;
+                        margin: 7px 5px;
                     }
                 }
                 span {
                     @include tipo-1 ('small', 1.2, 500, $dark-color-1);
+                    @include mqm('tablet') {
+                        @include tipo-1 ('smaller', 1.2, 500, $dark-color-1);
+                    }
                     opacity: .9;
                     text-align: center;
                     max-width: 250px;
