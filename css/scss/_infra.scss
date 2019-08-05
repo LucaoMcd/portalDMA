@@ -58,7 +58,7 @@
         .infra-d {
             padding: 0px 15% 100px 15%;
             @include mqm('tablet'){
-                padding: 50px 10%;
+                padding: 50px 5%;
             }
             display: flex;
             flex-wrap: wrap;
@@ -221,18 +221,19 @@
                     grid-column-gap: 35px;
                 }
                 @include mqm('tablet-small') {
+                    margin: 20px auto;
                     &:nth-child(1n) {
                         grid-template: 
                         "img" 80px
                         "title" 60px
-                        "description" 150px
+                        "description" 
                         / 300px ;
                     }
                     &:nth-child(2n) {
                         grid-template: 
                         "img" 80px
                         "title" 60px
-                        "description" 150px
+                        "description"
                         / 300px ;
                     }
                     justify-items: center;
@@ -253,6 +254,7 @@
                     @include tipo-1('medium', 1, 500, $dark-color-1);
                     @include mqm('tablet-small') {
                         @include tipo-1('small', 1, 500, $dark-color-1);
+                        padding-bottom: 15px;
                         text-align: center;
                     }
                 }
@@ -262,9 +264,12 @@
                     @include shadow;
                     border: 1px solid rgba(0, 0, 0, .1);
                     border-radius: 10px;
-                    padding: 10px 20px;
+                    padding: 12px;
                     p {
                         @include tipo-1('smaller', 1.5, 300, $dark-color-1)
+                        @include mqm('tablet-small') {
+                            text-align: center;
+                        }
                     }
                 }
             }
