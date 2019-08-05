@@ -13,8 +13,11 @@ export default function MenuAnimation() {
         menu_expand.classList.remove('animate-menu');
     });
 
-    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-    let vh = window.innerHeight * 0.01;
-    // Then we set the value in the --vh custom property to the root of the document
-    menu_expand.style.setProperty('--vh', `${vh}px`);
+    const heightMenu = () => {
+        let vh = window.innerHeight * 0.01;
+        menu_expand.style.setProperty('--vh', `${vh}px`);
+        console.log(vh)
+    }
+
+    window.addEventListener('resize', heightMenu)
 }

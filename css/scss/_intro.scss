@@ -110,7 +110,6 @@
         img {
             max-width: 90%;
             @include mqm('tablet') {
-                max-width: 80%;
                 margin: 0 auto;
             }
             margin: 0 0;
