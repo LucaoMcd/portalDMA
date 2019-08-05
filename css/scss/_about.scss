@@ -19,15 +19,16 @@
         }
         @include mqm('phone') {
             align-self: center;
-            padding: 50px 5%;
+            padding: 20px 5%;
         }
     }
     &-description {
         p {
-            @include tipo-1(small, 1.5, 300, white);
+            @include tipo-1("small", 1.5, 300, white);
             opacity: .9;
             text-align: right;
             @include mqm('tablet-wide'){
+                @include tipo-1("smaller", 1.5, 300, white);
                 text-align: center;
             }
         }
