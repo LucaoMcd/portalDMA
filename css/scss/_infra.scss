@@ -266,7 +266,7 @@
                     border-radius: 10px;
                     padding: 12px;
                     p {
-                        @include tipo-1('smaller', 1.5, 300, $dark-color-1)
+                        @include tipo-1('smaller', 1.5, 300, $dark-color-1);
                         @include mqm('tablet-small') {
                             text-align: center;
                         }
