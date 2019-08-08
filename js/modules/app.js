@@ -6,12 +6,14 @@ import Footer from "./footer.js"
 import FormCancel from "./form-cancel.js"
 import MascaraForm from "./mascara-form.js"
 import ScrollToTop from "./scroll-to-top.js"
+import Accordion from "./accordion.js"
 
 MenuAnimation()
 ScrollToTop()
 Slides()
 FilterByTag()
 Footer()
+Accordion('[data-anime="accordion"] .services-item')
 Form()
 FormCancel()
 MascaraForm()
