@@ -439,7 +439,7 @@
                     .service-title {
                         display: inline-block;
                         h3 {
-                            @include tipo-1 ('big', 1, 500, white);
+                            @include tipo-1 ('big', 1.1, 500, white);
                             @include mqm('desktop') {
                                 @include tipo-1 ('big', 1, 500, white);
                             }
@@ -452,7 +452,7 @@
                         }
                         p {
                             text-align: end;
-                            @include tipo-1 ('small', 1, 500, white);
+                            @include tipo-1 ('small', 1.2, 500, white);
                             opacity: .3;
                             @include mqm('tablet-wide') {
                                 text-align: center;
