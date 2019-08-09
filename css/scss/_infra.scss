@@ -109,7 +109,6 @@
                     align-items: center;
                 }
             }
-            
         }
         .dma {
             background: $dark-color-1;
@@ -501,7 +500,7 @@
         padding: 100px 5%;
         width: 100%;
         @include mqm('tablet') {
-            padding: 50px 15%;
+            padding: 50px 5%;
         }
 
         display: flex;
@@ -513,10 +512,17 @@
         h1 {
             margin: 0 40px 30px 0;
             align-self: flex-start;
-            @include tipo-1('big', 1, 500, $dark-color-1)
+            @include tipo-1('big', 1, 500, $dark-color-1);
+            @include mqm('tablet') {
+                margin: 0;
+                margin-bottom: 30px;
+            }
         }
         div {
             margin-left: 40px;
+            @include mqm('tablet') {
+                margin-left: 0;
+            }
             ul {
                 padding-top: 0px;
                 li {
