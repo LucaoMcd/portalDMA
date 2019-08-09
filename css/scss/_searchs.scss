@@ -45,29 +45,26 @@
                 @include tipo-1 ('small', 1.5, 400, $dark-color-1);
                 opacity: .9;
             }
-            a {
+            span {
                 justify-self: end;
-                &.arrow {
-                    display: flex;
-                    padding-right: 65px;
-                    @include mqm('tablet') {
-                    }
-                    align-items: center;
-                    @include tipo-1 ('smaller', 1.4, 0, 0);
-                    span {
-                        margin-left: 15px;
-                    }
-                }
+                @include tipo-1 ('smaller', 1.5, 500, $dark-color-1);
+                opacity: .7;
+                margin-right: 30px;
             }
         }
         &-img {
             grid-area: img;
+            justify-self: center;
+            margin-left: 30px;
             @include mqm('tablet-wide'){
                 padding: 50px;
+                margin-left: 0;
             }
-            justify-self: center;
             img {
-                max-width: 100%;
+                max-width: 380px;
+                @include mqm('desktop'){
+                    max-width: 300px;
+                }
             }
         }
     }
