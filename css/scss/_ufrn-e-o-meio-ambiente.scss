@@ -44,5 +44,27 @@
     }
     
     // intro end here
+    .content {
+        display: flex;
+        flex-direction: column;
+        img {
+            margin: 0 auto;
+            max-width: 500px;
+            margin-bottom: 50px;
+            @include mqm('phablet') {
+                max-width: 300px;
+            }
+        }
+        p {
+            @include tipo-1('small', 1.6, 300, $dark-color-1);
+            margin: 0 auto;
+            max-width: 700px;
+            margin-bottom: 70px;
+            text-align: center;
+            @include mqm('phablet') {
+                max-width: 300px;
+            }
+        }
+    }
 
 }
