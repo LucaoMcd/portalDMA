@@ -26,10 +26,9 @@
         p {
             @include tipo-1("small", 1.5, 300, white);
             opacity: .9;
-            text-align: right;
+            text-align: left;
             @include mqm('tablet-wide'){
                 @include tipo-1("smaller", 1.5, 300, white);
-                text-align: center;
             }
         }
         max-width: 600px; 
