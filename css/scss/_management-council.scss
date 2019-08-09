@@ -79,6 +79,23 @@
                         margin-top: 30px;
                     }
                 }
+                .politica-link {
+                    display: flex;
+                    align-items: center;
+                    opacity: .8;
+                    margin-top: 300px;
+                    @include mqm('tablet-small'){
+                        margin-top: 15px;
+                    }
+
+                    img {
+                        max-width: 30px;
+                        margin-right: 20px;
+                    }
+                    a {
+                        @include tipo-1('smaller', 1.3, 500, $dark-color-1);
+                    }
+                }
             }
             
             .composition {
