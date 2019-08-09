@@ -169,34 +169,37 @@
         <h2>O que fazemos</h2>
         <span class="folha"><img src="img/folha-branca.png" alt="Folha"></span>
     </div>
-    <div class="services">
+    <div class="services" data-group="services">
         <div class="services-seletores">
-            <div class="seletor ativo">
-                <img src="img/icons/afforest.png" alt="Coleta seletiva">
+            <div class="seletor" data-click="arborizacao">
+                <img src="img/icons/afforest.png" alt="Arborização">
             </div>
-            <div class="seletor">
+            <div class="seletor" data-click="coleta">
                 <img src="img/icons/recycle.png" alt="Coleta seletiva">
             </div>
-            <div class="seletor">
-                <img src="img/icons/sewer.png" alt="Coleta seletiva">
+            <div class="seletor" data-click="tratamento">
+                <img src="img/icons/sewer.png" alt="Tratamento de esgoto">
             </div>
-            <div class="seletor">
-                <img src="img/icons/education.png" alt="Coleta seletiva">
+            <div class="seletor" data-click="educacao">
+                <img src="img/icons/education.png" alt="Educação ambiental">
             </div>
-            <div class="seletor">
-                <img src="img/icons/pests.png" alt="Coleta seletiva">
+            <div class="seletor" data-click="vetores">
+                <img src="img/icons/pests.png" alt="Pragas e vetores">
             </div>
-            <div class="seletor">
-                <img src="img/icons/garbage.png" alt="Coleta seletiva">
+            <div class="seletor" data-click="limpeza">
+                <img src="img/icons/garbage.png" alt="Limpeza urbana">
             </div>
-            <div class="seletor">
-                <img src="img/icons/chemistry.png" alt="Coleta seletiva">
+            <div class="seletor" data-click="residuos">
+                <img src="img/icons/chemistry.png" alt="Resíduos químicos">
             </div>
-            <div class="seletor">
-                <img src="img/icons/water.png" alt="Coleta seletiva">
+            <div class="seletor" data-click="abastecimento">
+                <img src="img/icons/water.png" alt="Abastecimento de água">
+            </div>
+            <div class="seletor" data-click="programas">
+                <img src="img/icons/programs.png" alt="Programas da DMA">
             </div>
         </div>
-        <div class="services-item">
+        <div class="services-item" data-target="arborizacao">
             <div class="item-head">
                 <div class="illustration">
                     <img src="img/icons/afforest.png" alt="Arborização e jardinagem">
@@ -208,76 +211,209 @@
             </div>
             <div class="item-desc">
                 <p>
-                        O Programa de Arborização da UFRN foi criado para monitorar e atuar sobre todos os aspectos que envolvem o sistema arbóreo existente na Universidade, desenvolvendo atividades de produção (coleta de sementes, produção de mudas), manutenção (podas, transplantios) e licenciamento ambiental (planos de compensação, planos de arborização).
-                        Essas ações visam suavizar, ao máximo, os impactos ambientais negativos e a conseqüente degradação da qualidade ambiental gerados pelo crescimento urbano e adequações de infraestrutura que os Campi vem passando.
-                        Atualmente, o Programa já dispõe de banco de semente contendo 30 espécies nativas da Caatinga e da Mata Atlântica norte-riograndense. Entre elas, espécies de difícil produção como braúna, sapucaia, goiti-trubá e copaíba, permitindo uma produção média mensal de 250 mudas. Toda a produção é realizada no Horto da UFRN através de mão-de-obra capacitada.                        
+                    O Programa de Arborização da UFRN foi criado para monitorar e atuar sobre todos os aspectos que envolvem o sistema arbóreo existente na Universidade, desenvolvendo atividades de produção (coleta de sementes, produção de mudas), manutenção (podas, transplantios) e licenciamento ambiental (planos de compensação, planos de arborização).
+                </p>
+                <p>
+                    Essas ações visam suavizar, ao máximo, os impactos ambientais negativos e a conseqüente degradação da qualidade ambiental gerados pelo crescimento urbano e adequações de infraestrutura que os Campi vem passando.
+                </p>
+                <p>
+                    Atualmente, o Programa já dispõe de banco de semente contendo 30 espécies nativas da Caatinga e da Mata Atlântica norte-riograndense. Entre elas, espécies de difícil produção como braúna, sapucaia, goiti-trubá e copaíba, permitindo uma produção média mensal de 250 mudas. Toda a produção é realizada no Horto da UFRN através de mão-de-obra capacitada.                        
                 </p>
             </div>
-
         </div>
-        <!-- <div class="services-item">
-            <div class="illustration">
-                <img src="img/icons/recycle.png" alt="Coleta seletiva">
+        <div class="services-item" data-target="coleta">
+            <div class="item-head">
+                <div class="illustration">
+                    <img src="img/icons/recycle.png" alt="Arborização e jardinagem">
+                </div>
+                <div class="service-title">
+                    <h3>Coleta seletiva</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
             </div>
-            <div class="description">
-                <h3>Coleta seletiva</h3>
-                <p>Suspendisse suscipit faucibus vestibulum. Nullam euismod convallis sapien eget rhoncus.</p>
-            </div>
-        </div>
-        <div class="services-item">
-            <div class="illustration">
-                <img src="img/icons/sewer.png" alt="Tratamento de esgoto">
-            </div>
-            <div class="description">
-                <h3>Tratamento de esgoto</h3>
-                <p>Suspendisse suscipit faucibus vestibulum. Nullam euismod convallis sapien eget rhoncus.</p>
-            </div>
-        </div>
-        <div class="services-item">
-            <div class="illustration">
-                <img src="img/icons/education.png" alt="Educação ambiental">
-            </div>
-            <div class="description">
-                <h3>Educação ambiental</h3>
-                <p>Suspendisse suscipit faucibus vestibulum. Nullam euismod convallis sapien eget rhoncus.</p>
-            </div>
-        </div>
-        <div class="services-item">
-            <div class="illustration">
-                <img src="img/icons/pests.png" alt="Vetores e pragas urbanas">
-            </div>
-            <div class="description">
-                <h3>Vetores e pragas urbanas</h3>
-                <p>Suspendisse suscipit faucibus vestibulum. Nullam euismod convallis sapien eget rhoncus.</p>
+            <div class="item-desc">
+                <p>
+                    O Decreto nº 5.940, de 25 de outubro de 2006, instituiu a Coleta Seletiva Solidária, ou seja, a separação na fonte geradora dos resíduos recicláveis descartados, em todos os órgãos e entidades da administração pública federal direta e indireta, e sua destinação às associações e cooperativas de catadores de materiais recicláveis.
+                </p>
+                <p>
+                    Um projeto de coleta seletiva é definido como o processo de separação dos materiais recicláveis do restante dos resíduos nas próprias fontes geradoras. Estes materiais são recolhidos à parte em recipientes específicos e encaminhados para uma nova separação, mais fina, onde são selecionados de acordo com suas características e com sua reutilização, reciclagem ou descarte. 
+                </p>
+                <p>
+                    Foi iniciado, em 2001, um projeto de coleta especial de papel para algumas unidades da UFRN como marco inicial do gerenciamento de resíduos sólidos recicláveis na universidade. 
+                </p>
+                <p>
+                    Esta experiência serviu para sinalizar procedimentos que viabilizariam projetos mais abrangentes de coleta seletiva na UFRN, o que se concretizou em 2009, com a construção da UATR, e a posterior assinatura do termo de compromisso com as cooperativas de catadores de materiais recicláveis da cidade. 
+                </p>
+                <p>
+                    A Coleta Seletiva evita a contaminação dos materiais reaproveitáveis, aumentando o valor agregado destes e diminuindo os custos da reciclagem. Do ponto de vista financeiro, a coleta seletiva de lixo pode trazer benefícios sociais, como a geração de empregos para catadores de materiais recicláveis; e benefícios econômicos, traduzidos na redução do custo de transporte e disposição.
+                </p>
+                <p>
+                    Atualmente são destinadas às cooperativas mais de 300 toneladas de resíduos recicláveis por ano.      
+                </p>
             </div>
         </div>
-        <div class="services-item">
-            <div class="illustration">
-                <img src="img/icons/garbage.png" alt="Limpeza urbana">
+        <div class="services-item" data-target="tratamento">
+            <div class="item-head">
+                <div class="illustration">
+                    <img src="img/icons/sewer.png" alt="Arborização e jardinagem">
+                </div>
+                <div class="service-title">
+                    <h3>Tratamento de esgoto</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
             </div>
-            <div class="description">
-                <h3>Limpeza urbana</h3>
-                <p>Suspendisse suscipit faucibus vestibulum. Nullam euismod convallis sapien eget rhoncus.</p>
+            <div class="item-desc">
+                <p>
+                    O sistema de esgotamento sanitário do Campus Central é composto por aproximadamente 7,0 Km de rede coletora, Estação de Tratamento de Esgotos (ETE) e reuso do efluente tratado.
+                </p>
+                <p>
+                    O projeto da Estação de Tratamento de Esgotos (ETE) foi elaborado no final da década de 70, iniciando sua operação em 1981.
+                    A estação de tratamento de esgoto da UFRN tem como objetivo destinar adequadamente os efluentes sanitários gerados no Campus Central, eliminando os sistemas de fossas sépticas e sumidouros que contaminam o solo e o lençol freático que abastece o Campus.
+                </p>
+                <p>
+                    O tratamento é realizado em valo de oxidação com decantação secundária. A escolha por essa concepção de tratamento baseou-se nas seguintes vantagens: pequena área para implantação, custo inferior aos sistemas convencionais, elevada eficiência na remoção de DBO e sólidos em suspensão, lodo mineralizado que dispensa a digestão anaeróbica, fácil operação e manutenção e dispensa decantação primária.
+                </p>
+                <p>
+                    O efluente tratado é utilizado na irrigação das áreas verdes da ETE e dos campos de futebol do Campus Central.          
+                </p>
             </div>
         </div>
-        <div class="services-item">
-            <div class="illustration">
-                <img src="img/icons/chemistry.png" alt="Resíduos químicos">
+        <div class="services-item" data-target="educacao">
+            <div class="item-head">
+                <div class="illustration">
+                    <img src="img/icons/education.png" alt="Arborização e jardinagem">
+                </div>
+                <div class="service-title">
+                    <h3>Educação ambiental</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
             </div>
-            <div class="description">
-                <h3>Resíduos químicos</h3>
-                <p>Suspendisse suscipit faucibus vestibulum. Nullam euismod convallis sapien eget rhoncus.</p>
+            <div class="item-desc">
+                <p>
+                    As ações de educação ambiental dão apoio às demais atividades desenvolvidas pela Diretoria de Meio Ambiente. Fundamentam-se nos princípios de uma educação ambiental crítica e dialógica que busca a transformação social. Têm o objetivo de consolidar a temática da sustentabilidade como prioritária na agenda cotidiana dos participantes, valorizando a diversidade cultural e ambiental, proporcionando aos participantes um aprendizado que inclui questões de cidadania e põe em foco a complexidade das questões socioambientais da contemporaneidade.
+                </p>
+                <p>
+                    <b>Circuito Ambiental:</b> visita guiada, com acompanhamento de profissionais qualificados, à Estação de Tratamento de Esgoto (ETE), Unidade de Armazenamento Temporário de Resíduos (UATR), ao Horto e Casa de vegetação da UFRN. Os grupos devem ter no mínimo 10 e no máximo 30 pessoas e faixa etária acima de 12 anos. O atendimento dependerá da disponibilidade dos setores.
+                </p>
+                <p>
+                    <b>Mostra de ecoprodutos, economia solidária e serviços sustentáveis:</b> tem o objetivo de estimular a adoção de padrões de consumo mais sustentáveis; contribuindo para a redução dos danos que seriam causados no ambiente pelo descarte de materiais que podem ser reutilizados ou reciclados após o consumo; gerando consciência ambiental.
+                </p>
+                <p>
+                    Seguindo o princípio dos 3Rs, <b>reduzir</b>, <b>reutilizar</b> e <b>reciclar</b>, artistas plásticos, artesãos, e educadores ambientais expõem peças artísticas e/ou utilitárias confeccionadas com materiais encontrados na natureza ou descartados como resíduo sólido urbano.
+                </p>
+                <p>
+                    Empresas e ONGs também mostram como reduzir impactos causados por resíduos volumosos e/ou perigosos, recolhendo no local <b>lâmpadas fluorescentes</b>, que serão tratadas por empresa especializada, <b>resíduos eletroeletrônicos</b>, para os quais será dada uma destinação adequada, <b>óleo de cozinha usado</b>  que será transformado em sabão ecológico, <b>banners de lona</b> que serão transformados em bolsas e acessórios. No local já existe um ponto permanente de descarte para <b>medicamentos</b> e outro para <b>resíduos de difícil reciclagem</b>, como esponjas de lavar louça, pastas e escovas de dente, lápis grafite, lápis colorido. Não descarte esses resíduos no lixo, eles impactam o meio ambiente e afetam a saúde humana. Todos os dias acontecem oficinas gratuitas para os visitantes de cerâmica, reaproveitamento de materiais, entre outras.
+                </p>
+                <p>
+                    <b>Cursos e minicursos em Meio Ambiente e Educação Ambiental:</b> Com carga horária variável, de caráter interdisciplinar, tem o objetivo de oferecer aos participantes os instrumentos necessários para que os mesmos sejam capazes de exercer o papel de educador ambiental de maneira reflexiva e crítica, com conhecimento teórico-prático, na elaboração, execução, acompanhamento e avaliação de projetos ambientais, abordando temáticas importantes da contemporaneidade, como gestão e educação ambiental, mudanças climáticas, gestão de resíduos, compostagem, agroecologia, entre outros.
+                </p>
+                <p>
+                    <b>Cine ambiental tela verde:</b> Consiste na veiculação de conteúdos socioambientais por meios audiovisuais não midiáticos, acompanhada de roda de conversa sobre os temas abordados. Tem papel sensibilizador/mobilizador e visa contribuir com o processo de construção de valores culturais comprometidos com a qualidade ambiental. Tem parceria com o Circuito Tela Verde (MMA/MinC). Utiliza-se, também, de filmes da plataforma Videocamp que apontam causas urgentes, que ampliam o nosso olhar para temas sensíveis e que promovem um mundo mais justo, solidário, sustentável e plural.
+                </p>
             </div>
         </div>
-        <div class="services-item">
-            <div class="illustration">
-                <img src="img/icons/water.png" alt="Abastecimento de água">
+        <div class="services-item" data-target="vetores">
+            <div class="item-head">
+                <div class="illustration">
+                    <img src="img/icons/pests.png" alt="Arborização e jardinagem">
+                </div>
+                <div class="service-title">
+                    <h3>Vetores e pragas urbanas</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
             </div>
-            <div class="description">
-                <h3>Abastecimento de água</h3>
-                <p>Suspendisse suscipit faucibus vestibulum. Nullam euismod convallis sapien eget rhoncus.</p>
+            <div class="item-desc">
+                <p>
+                    A DMA realiza ações de prevenção e controle das antropozoonoses (doença primária de animais e que pode ser transmitida aos humanos), desenvolvendo sistemas de vigilância sanitária e epidemiológica. Isso é possível através do controle de populações de animais domésticos abandonados e de populações de animais sinantrópicos (morcegos, pombos, ratos, mosquitos e abelhas, além de insetos diversos e aracnídeos). 
+                </p>
+                <p>
+                    O ambiente urbano pode abrigar grande número de espécimes de animais, desta forma adaptados ao convívio com seres humanos que, por características inerentes a suas espécies, são capazes de transmitir doenças ou apresentar comportamento incompatível com a convivência saudável com pessoas, como os roedores, insetos e aracnídeos. O controle de pragas e vetores urbanos visa, através da sua eliminação periódica, controlar animais potencialmente transmissores de antropozoonoses ou capazes de alguma forma de representar perigo aos seres humanos, proporcionando, desta forma, um ambiente saudável à toda a comunidade acadêmica. 
+                </p>
+                <p>
+                    Pelas características peculiares da localização do Campus Central da UFRN, em área adjacente à Zona de Proteção Ambiental (ZPA-02, Parque Estadual das Dunas de Natal), o controle deve ser realizado de forma a evitar todo e qualquer dano ambiental que venha a ocorrer como consequência do uso de desinfestantes e outros contaminantes. Assim, sempre que possível, recomenda-se o manejo integrado de pragas; além disso, a correta aplicação de desinfestantes constitui uma técnica útil e eficiente; porém, para melhores resultados, o uso de desinfestantes deve ser combinado com outras práticas de manejo, visando a preservação dos inimigos naturais dos animais indesejados.
+                </p>
             </div>
-        </div> -->
+        </div>
+        <div class="services-item" data-target="limpeza">
+            <div class="item-head">
+                <div class="illustration">
+                    <img src="img/icons/garbage.png" alt="Arborização e jardinagem">
+                </div>
+                <div class="service-title">
+                    <h3>Limpeza Urbana</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+            <div class="item-desc">
+                <p>
+                    O programa de gestão integrada de resíduos é o conjunto de projetos, ações, planos e normas destinados a promover e regular a concepção, implementação e administração do gerenciamento dos resíduos gerados na UFRN. Abrange as atividades de coleta, armazenamento, tratamento e destinação final dos resíduos gerados na Universidade.
+                </p>
+                <p>
+                    Os objetivo do programa é reduzir e controlar os impactos causados sobre o ambiente pelos resíduos produzidos na UFRN, assegurando a melhoria contínua das condições de segurança, higiene e saúde ocupacional da comunidade universitária e colaborando com a qualidade de vida da população do seu entorno.
+                </p>
+                <p>
+                    As ações visam reduzir a geração de resíduos e adequar a segregação na origem; controlar e reduzir riscos ao meio ambiente e à saúde humana; assegurar o correto manuseio e disposição final dos resíduos e implantar um sistema de compras na UFRN baseado nos princípios da sustentabilidade, na otimização dos recursos e na redução do desperdício.
+                </p>
+            </div>
+        </div>
+        <div class="services-item" data-target="residuos">
+            <div class="item-head">
+                <div class="illustration">
+                    <img src="img/icons/chemistry.png" alt="Arborização e jardinagem">
+                </div>
+                <div class="service-title">
+                    <h3>Resíduos Químicos</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+            <div class="item-desc">
+                <p>
+                    Falar com Edilson (usar os Jpgs do projeto)    
+                </p>
+            </div>
+        </div>
+        <div class="services-item" data-target="abastecimento">
+            <div class="item-head">
+                <div class="illustration">
+                    <img src="img/icons/water.png" alt="Arborização e jardinagem">
+                </div>
+                <div class="service-title">
+                    <h3>Abastecimento de água</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+            <div class="item-desc">
+                <p>
+                    O programa de controle de qualidade da água da UFRN, que é coordenado pela Superintendência de Infraestrutura da UFRN, monitora a qualidade da água fornecida à comunidade universitária da UFRN, através de coleta e análises periódicas, visando verificar e atender às normas estabelecidas pela Portaria n° 518/04, de 25 de março de 2004, do Ministério da Saúde cuja determinação é que toda água destinada ao consumo humano deve obedecer aos padrões de potabilidade nela estabelecidos e estar sujeita à vigilância de qualidade. No caso da UFRN, esta vigilância é feita pela Secretaria Municipal de Saúde. 
+                </p>
+                <p>
+                    O Campus Central da UFRN dispõe de sistema próprio de abastecimento de água gerenciado pela Superintendência de Infraestrutura. As unidades isoladas e o Campus Saúde são abastecidos pela concessionária local, a Companhia de Águas e Esgoto do Rio Grande do Norte (CAERN). O abastecimento do Campus Central é feito através da captação de água do manancial subterrâneo por um conjunto de seis poços artesianos, com vazões aproximadas de 16 a 30 m³/h. Devido à excelente qualidade da água captada é dispensado qualquer tratamento corretivo, estabelecendo-se apenas o uso da cloração para fins de desinfecção de possíveis organismos causadores de doenças.
+                </p>
+                <p>
+                    O sistema de abastecimento do Campus possui ainda quatro reservatórios principais elevados, de 200 m³ cada, localizados em pontos estratégicos e interligados que permitem uma boa pressão em relação à saída da água nos seus pontos de distribuição. Além dos reservatórios principais, outros quatro reservatórios secundários, de 30 m³ cada são dispostos em setores de aula com o objetivo de auxiliar a reservação e garantir pressão suficiente para o abastecimento.
+                    As análises da qualidade da água da UFRN funcionam continuamente com periodicidade mensal, exceto em casos de contaminação evidente ou quando a coleta é solicitada. A rotina ordinária para coleta mensal contempla 61 pontos de coleta no Campus Central e 42 nas demais unidades, totalizando 103 pontos. Desse modo no ano de 2011, durante os meses de Janeiro a Junho, foram realizadas 1.266 coletas e análises. 
+                </p>
+                <p>
+                    As informações obtidas a partir das análises realizadas permitem que sejam tomadas as medidas necessárias para atenuar anormalidades, eventualmente detectadas, relativas à qualidade da água.
+                </p>
+            </div>
+        </div>
+        <div class="services-item" data-target="programas">
+            <div class="item-head">
+                <div class="illustration">
+                    <img src="img/icons/programs.png" alt="Programas da DMA">
+                </div>
+                <div class="service-title">
+                    <h3>Programas da DMA</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+            <div class="item-desc">
+                <p>
+                    Falar com Edilson (usar os Jpgs do projeto)    
+                </p>
+            </div>
+        </div>
     </div>
 </section>
 

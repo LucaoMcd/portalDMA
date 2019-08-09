@@ -7,8 +7,10 @@ import FormCancel from "./form-cancel.js"
 import MascaraForm from "./mascara-form.js"
 import ScrollToTop from "./scroll-to-top.js"
 import Accordion from "./accordion.js"
+import Responsive from "./responsive-tests.js"
 
 MenuAnimation()
+Responsive()
 ScrollToTop()
 Slides()
 FilterByTag()

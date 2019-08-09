@@ -16,7 +16,6 @@ export default function MenuAnimation() {
     const heightMenu = () => {
         let vh = window.innerHeight * 0.01;
         menu_expand.style.setProperty('--vh', `${vh}px`);
-        console.log(vh)
     }
 
     heightMenu() 
