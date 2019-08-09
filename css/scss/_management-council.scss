@@ -73,7 +73,7 @@
                         @include mqm('phone') {
                             max-width: 100%;
                         }
-                        text-align: justify;
+                        text-align: center;
                     }
                     p + p {
                         margin-top: 30px;
@@ -118,7 +118,7 @@
                                 padding-bottom: 15px;
                             }
                             h4 {
-                                @include tipo-1('smaller', 1, 300, white);
+                                @include tipo-1('smaller', 1.4, 300, white);
                                 font-size: .6rem;
                                 opacity: .9;
                             }
