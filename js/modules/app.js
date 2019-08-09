@@ -6,10 +6,10 @@ import Footer from "./footer.js"
 import FormCancel from "./form-cancel.js"
 import MascaraForm from "./mascara-form.js"
 import ScrollToTop from "./scroll-to-top.js"
-// import Responsive from "./responsive-tests.js"
+import Responsive from "./responsive-tests.js"
 
 MenuAnimation()
-// Responsive()
+Responsive()
 ScrollToTop()
 Slides()
 FilterByTag()
