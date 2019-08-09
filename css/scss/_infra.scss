@@ -103,8 +103,8 @@
                 }
                 a {
                     align-self: flex-end;
-                    @include tipo-1('smaller', 1, 500, $dark-color-1);
-                    opacity: .9;
+                    @include tipo-1('smaller', 1, 700, $dark-color-1);
+                    opacity: .7;
                     display: flex;
                     align-items: center;
                 }
@@ -364,6 +364,9 @@
                 justify-content: center;
                 align-items: center;
                 margin-bottom: 80px;
+                @include mqm('tablet'){
+                    margin-bottom: 30px;
+                }
                 .seletor {
                     &:hover {
                         transform: scale(1.1);
@@ -444,6 +447,9 @@
                             margin-bottom: 10px;
                             opacity: .9;
                             text-align: right;
+                            @include mqm('tablet') {
+                                text-align: center;
+                            }
                         }
                         p {
                             text-align: end;
