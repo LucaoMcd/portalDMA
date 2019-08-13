@@ -19,7 +19,7 @@
             h1 {
                 @include tipo-1('big-big', 1, 500, $dark-color-1);
                 font-size: 3rem;
-                padding: 0;
+                padding: 0 10%;
                 text-align: center;
                 margin-bottom: 10px;
             }
