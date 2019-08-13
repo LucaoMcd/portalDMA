@@ -20,6 +20,7 @@
                 @include tipo-1('big-big', 1, 500, $dark-color-1);
                 font-size: 3rem;
                 padding: 0;
+                text-align: center;
                 margin-bottom: 10px;
             }
             h2 {
@@ -43,11 +44,18 @@
         justify-content: center;
         align-items: center;
         span {
+            display: block;
             height: 30px;
             width: 30px;
             border-top: 10px solid $dark-color-1;
             border-left: 10px solid $dark-color-1;
             opacity: .5;
+            @include mqm('tablet') {
+                height: 10px;
+                width: 10px;
+                border-top: 3px solid $dark-color-1;
+                border-left: 3px solid $dark-color-1;
+            }
             transition: all ease .1s;
             cursor: pointer;
             &.arrow-left {
@@ -63,6 +71,13 @@
         img {
             display: none;
             max-width: 500px;
+            @include mqm('tablet') {
+                max-width: 300px;
+                margin: 0 5px;
+            }
+            @include mqm('phone') {
+                max-width: 250px;
+            }
             margin: 0 30px;
             &.ativo {
                 display: block;
