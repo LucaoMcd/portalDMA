@@ -39,6 +39,9 @@
     
     .coleta {
         padding: 50px 5%;
+        @include mqm('tablet') {
+            padding: 10px 5% 30px 5%;
+        }
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;
@@ -86,4 +89,33 @@
     }
 
     // coleta end here
+
+
+    // download end here
+
+    .download-pdf {
+        text-align: center;
+        padding: 0 5% 50px 5%;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include tipo-1 ('smaller', 1, 700, $dark-color-1);
+            opacity: .6;
+            &:hover {
+                opacity: .9;
+            }
+            &::before {
+                content: '';
+                display: block;
+                width: 20px;
+                height: 20px;
+                background: url('../img/icons/download.png') no-repeat center;
+                background-size: cover;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    // download end here
 }
