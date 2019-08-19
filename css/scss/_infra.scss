@@ -458,6 +458,51 @@
                                 text-align: center;
                             }
                         }
+                        .wpp-cta {
+                            display: flex;
+                            align-items: center;
+                            margin-top: 90px;
+                            float: right;
+                            &:hover {
+                                span {
+                                    transition: opacity .2s ease;
+                                    opacity: .5;
+                                }
+                            }
+                            span {
+                                opacity: 0;
+                                transition: opacity .2s ease;
+                                @include tipo-1('smaller', 1.4, 300, white);
+                                margin-right: 15px;
+                                padding: 7px 10px;
+                                border-radius: 4px;
+                                background: rgba(255, 255, 255,.4);
+                                position: relative;
+                                &::after {
+                                    content: "";
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    margin-left: 10px;
+                                    width: 0; 
+                                    height: 0; 
+                                    position: absolute;
+                                    top: 10px;
+
+                                    border-top: 5px solid transparent;
+                                    border-bottom: 5px solid transparent; 
+                                    border-left: 5px solid rgba(255, 255, 255,.4); 
+                                }
+                            }
+                            img {
+                                max-width: 30px;
+                                cursor: pointer;
+                                filter: saturate(00%);
+                                &:hover {
+                                    filter: saturate(100%)
+                                }
+                            }
+                        }
+                        
                     }
                 }
                 .item-desc {
