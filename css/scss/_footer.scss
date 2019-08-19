@@ -38,6 +38,7 @@
             align-self: center;
             &--white {
                 p {
+                    text-align: left;
                     border-left: 2px solid #FFF;
                     @include tipo-1(small, 1.2, 100, #FFF);
                     @include mqm('tablet') {
