@@ -32,4 +32,24 @@
       margin-right: 30px;
     }
   }
+
+  .social-media-links {
+    max-width: 300px;
+    margin: 20px auto 0 auto;
+    display: grid;
+    justify-content: center;
+    ul {
+        align-self: center;
+        li {    
+            display: inline-block;
+            margin: 10px;
+            color: white;
+            a {
+                img {
+                    max-width: 30px;
+                }
+            }
+        }
+    }
+  }
 }
