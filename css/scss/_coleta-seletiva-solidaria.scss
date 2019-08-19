@@ -70,6 +70,10 @@
             &.active:hover {
                 opacity: 1;
             }
+            &.deactive {
+                opacity: .1;
+                cursor: auto;
+            }
         }
         img {
             display: none;
