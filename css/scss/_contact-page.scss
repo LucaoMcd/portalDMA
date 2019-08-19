@@ -66,10 +66,14 @@
                         background: $primary-color-3;
                         span {
                             color: white;
+                            filter: invert(100%);
                         }
                     }
                     span {
                         @include tipo-1('big', 1, 300, $primary-color-3);
+                        img {
+                            max-width: 30px;
+                        }
                     }
                     margin: 25px;
                     @include mqm('tablet'){
@@ -132,7 +136,8 @@
         [data-click].active {
             background: $primary-color-3;
             span {
-                color: #FFF;        
+                color: #FFF;
+                filter: invert(100%);
             }
         }
         
