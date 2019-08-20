@@ -25,7 +25,9 @@
             h2 {
                 @include tipo-1('small', 1.5, 300, $dark-color-1);
                 font-size: 1rem;
-                padding: 0;
+                max-width: 800px;
+                opacity: .8;
+                padding: 15px;
                 margin: 0;
                 flex-shrink: 0;
             }
@@ -47,7 +49,7 @@
             &-seletores {
                 display: flex;
                 justify-content: center;
-                margin-bottom: 60px;
+                margin-bottom: 40px;
                 @include mqm('tablet') {
                     margin-bottom: 30px;
                 }
@@ -97,9 +99,9 @@
             .description-text {
                 text-align: center;
                 span {
-                    @include tipo-1 ('smaller', 1, 300, $dark-color-1);
-                    opacity: .5;
-                    margin-bottom: 10px;
+                    @include tipo-1 ('small', 1, 500, $dark-color-1);
+                    opacity: .8;
+                    margin-bottom: 20px;
                     display: block;
                 }
                 h2 {

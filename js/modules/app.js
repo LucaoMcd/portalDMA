@@ -8,8 +8,10 @@ import MascaraForm from "./mascara-form.js"
 import ScrollToTop from "./scroll-to-top.js"
 // import Responsive from "./responsive-tests.js"
 import SliderCampanhas from "./slides-campanhas.js"
+import changeBtnText from "./change-btn-text.js"
 
 MenuAnimation()
+changeBtnText()
 // Responsive()
 ScrollToTop()
 Slides()
