@@ -15,16 +15,27 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            .btnVoltar {
+                @include tipo-1 ('small', 1.3, 500, white);
+                align-self: flex-start;
+                margin-bottom: 40px;
+            }
             h1 {
                 align-self: flex-start;
                 @include tipo-1 ('big', 1.3, 700, white);
                 padding: 0;
                 margin: 0;
+                margin-bottom: 10px;
+            }
+            .autores {
+                @include tipo-1('small', 1.4, 300, white);
+                opacity: .5;
                 margin-bottom: 30px;
+                align-self: flex-start;
             }
             .img-wrapper {
                 overflow: hidden;
-                padding-bottom: 100px;
+                padding-bottom: 60px;
                 @include mqm('tablet') {
                     padding-bottom: 0;
                 }
@@ -81,15 +92,22 @@
                     }
                 }
             }
-            .resume {
+            .repositorio {
                 align-self: flex-end;
                 p {
-                    @include tipo-1('small', 1.4, 500, white);
+                    @include tipo-1('smaller', 1.4, 300, white);
                     max-width: 500px;
                     padding-bottom: 50px;
                     margin: 0;
                     @include mqm('phone-wide'){
                         @include tipo-1('small', 1.4, 300, white);
+                    }
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        background: url("../img/icons/download.png")
                     }
                 }
             }
