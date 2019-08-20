@@ -9,10 +9,12 @@ import ScrollToTop from "./scroll-to-top.js"
 // import Responsive from "./responsive-tests.js"
 import SliderCampanhas from "./slides-campanhas.js"
 import changeBtnText from "./change-btn-text.js"
+import RedirectToServices from "./redirect-to-services.js"
 
 MenuAnimation()
 changeBtnText()
 // Responsive()
+RedirectToServices()
 ScrollToTop()
 Slides()
 FilterByTag()
