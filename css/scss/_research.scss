@@ -94,7 +94,7 @@
             }
             .repositorio {
                 align-self: flex-end;
-                p {
+                a {
                     @include tipo-1('smaller', 1.4, 300, white);
                     max-width: 500px;
                     padding-bottom: 50px;
@@ -102,12 +102,17 @@
                     @include mqm('phone-wide'){
                         @include tipo-1('small', 1.4, 300, white);
                     }
+                    display: flex;
+                    align-items: flex-end;
                     &::after {
                         content: '';
                         display: block;
+                        margin-left: 10px;
                         width: 20px;
                         height: 20px;
-                        background: url("../img/icons/download.png")
+                        background: white;
+                        background: url("../img/icons/download-white.png") no-repeat center;
+                        background-size: cover;
                     }
                 }
             }
@@ -127,6 +132,7 @@
             padding: 50px 10%;
             max-width: 750px;
             p {
+                text-align: justify;
                 max-width: 100%;
                 @include tipo-1('small', 1.4, 300, $dark-color-1);
             }
