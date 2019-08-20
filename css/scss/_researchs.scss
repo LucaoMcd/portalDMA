@@ -221,5 +221,23 @@
     }
     
     // intro end here
+
+    .repositorioLink {
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 40px;
+        p {
+            text-align: center;
+            @include tipo-1('smaller', 1.5, 300, $dark-color-1);
+            padding-bottom: 20px;
+        }
+        a {
+            text-align: center;
+            @include tipo-1('smaller', 1.5, 500, $dark-color-1);
+        }
+    }
     
 }
