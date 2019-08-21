@@ -5,8 +5,15 @@ export default function Slides() {
             $allClick = $(this).find('[data-click]'),
             activeClass = 'active';
 
-        $allTarget.first().addClass(activeClass);
-        $allClick.first().addClass(activeClass);
+        const services = document.querySelector('[data-group="services"]')
+        if(services) {
+            let randomNumber = Math.floor(Math.random() * $allTarget.length)
+            $allTarget[randomNumber].classList.add(activeClass)
+            $allClick[randomNumber].classList.add(activeClass)
+        } else {
+            $allTarget.first().addClass(activeClass);
+            $allClick.first().addClass(activeClass);
+        }
 
         $allClick.click(function (e) {
             e.preventDefault();
