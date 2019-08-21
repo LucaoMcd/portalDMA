@@ -466,18 +466,22 @@
                             @include mqm('tablet') {
                                 margin-top: 40px;
                             }
-                            &:hover {
-                                span {
-                                    transition: opacity .2s ease;
-                                    opacity: .5;
-                                }
-                            }
+                            // &:hover {
+                            //     span {
+                            //         transition: opacity .2s ease;
+                            //         opacity: .5;
+                            //     }
+                            // }
                             span {
                                 max-width: 300px;
                                 opacity: 0;
                                 @include mqm('tablet') {
                                     opacity: .5;
                                 }
+                                animation-name: showAfter;
+                                animation-duration: 2s;
+                                animation-delay: 3s;
+                                animation-fill-mode: forwards;
                                 transition: opacity .2s ease;
                                 @include tipo-1('smaller', 1.4, 300, white);
                                 margin-right: 15px;
@@ -515,7 +519,14 @@
                                 }
                             }
                         }
-                        
+                        @-webkit-keyframes showAfter {
+                            from { opacity: 0; }
+                            to { opacity: .5; }
+                        }
+                        @keyframes showAfter {
+                            from { opacity: 0; }
+                            to { opacity: .5; }
+                        }
                     }
                 }
                 .item-desc {
