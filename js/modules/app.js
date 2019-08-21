@@ -11,13 +11,11 @@ import SliderCampanhas from "./slides-campanhas.js"
 import changeBtnText from "./change-btn-text.js"
 import RedirectToServices from "./redirect-to-services.js"
 import animationWpp from "./animation-wpp.js"
-import showRandomServices from "./show-random-services.js"
 
 // Responsive()
 MenuAnimation()
 changeBtnText()
 animationWpp()
-//showRandomServices()
 RedirectToServices()
 ScrollToTop()
 Slides()
