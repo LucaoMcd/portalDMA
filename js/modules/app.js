@@ -10,9 +10,11 @@ import ScrollToTop from "./scroll-to-top.js"
 import SliderCampanhas from "./slides-campanhas.js"
 import changeBtnText from "./change-btn-text.js"
 import RedirectToServices from "./redirect-to-services.js"
+import animationWpp from "./animation-wpp.js"
 
 MenuAnimation()
 changeBtnText()
+animationWpp()
 // Responsive()
 RedirectToServices()
 ScrollToTop()
