@@ -5,7 +5,7 @@
         // motivation start here
         
         &-description {
-            padding: 20px 0 50px 0;
+            padding: 20px 0 100px 0;
             @include mqm('tablet-wide'){
                 padding: 50px 0 50px 0;
             }
@@ -13,7 +13,7 @@
                 padding-bottom: 0;
             }
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             justify-content: space-around;
             @include mqm('tablet-small'){
                 grid-template-columns: 1fr;
@@ -83,10 +83,7 @@
                     display: flex;
                     align-items: center;
                     opacity: .8;
-                    margin-top: 300px;
-                    @include mqm('tablet-small'){
-                        margin-top: 15px;
-                    }
+                    margin-top: 20px;
 
                     img {
                         max-width: 30px;
@@ -99,9 +96,13 @@
             }
             
             .composition {
+                display: flex;
+                justify-content: center;
+                margin-top: 40px;
                 .description-wrapper {
                     display: inline-block;
-                    align-self: flex-end;
+                    align-self: center;
+                    justify-self: center;
                     padding-bottom: 60px;
                     padding: 50px 40px;
                     @include mqm('phone') {
@@ -109,6 +110,7 @@
                     }
                     background: $dark-color-2;
                     h2 {
+                        text-align: center;
                         @include tipo-1('big', 1, 700, white);
                         padding-bottom: 60px;
                         @include mqm('tablet-wide') {
@@ -117,13 +119,19 @@
                     }
                     .specs {
                         display: grid;
-                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
                         grid-row-gap: 60px;
                         grid-column-gap: 20px;
                         @include mqm('tablet-wide') {
-                            grid-template-columns: 1fr 1fr;
+                            grid-template-columns: 1fr 1fr 1fr 1fr;
                             grid-row-gap: 30px;
                             grid-column-gap: 10px;
+                        }
+                        @include mqm('tablet') {
+                            grid-template-columns: 1fr 1fr 1fr;
+                        }
+                        @include mqm('phablet') {
+                            grid-template-columns: 1fr 1fr;
                         }
                         li {
                             max-width: 180px;
@@ -138,6 +146,10 @@
                                 @include tipo-1('smaller', 1.4, 300, white);
                                 font-size: .6rem;
                                 opacity: .9;
+                            }
+                            &:first-child {
+                                grid-area: 1 / 1 / 1 / -1;
+                                justify-self: center;
                             }
                         }
                     }

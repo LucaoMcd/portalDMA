@@ -10,7 +10,7 @@
         "scroll scroll"
         / 1fr 1fr;
     @include mqm('tablet') {
-        min-height: 100vh;
+        min-height: calc(100vh - 80px);
         box-sizing: border-box;
         grid:
             "img"
