@@ -39,8 +39,9 @@
     
     .coleta {
         padding: 50px 5%;
+        padding-top: 10vh;
         @include mqm('tablet') {
-            padding: 10px 5% 30px 5%;
+            padding: 15vh 5% 30px 5%;
         }
         display: flex;
         flex-wrap: nowrap;
