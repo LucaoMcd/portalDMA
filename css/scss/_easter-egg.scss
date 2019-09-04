@@ -87,7 +87,7 @@
     position: relative;
     z-index: 1;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
     padding: 0 10%;
     box-sizing: border-box;
@@ -108,14 +108,22 @@
           padding: 50px 20px;
       }
       background: $dark-color-2;
-      h2 {
+      .title {
+        h2 {
           text-align: center;
           @include tipo-1('big', 1, 700, white);
-          padding-bottom: 60px;
+          padding-bottom: 15px;
+          font-size: 2rem;
           @include mqm('tablet-wide') {
-              padding-bottom: 40px;
-              font-size: 1.5rem;
+            padding-bottom: 10px;
+            font-size: 1.5rem;
           }
+        }
+        img {
+          margin: 0 auto;
+          width: 30px;
+          padding-bottom: 40px;
+        }
       }
       .main {
         display: grid;
@@ -125,27 +133,46 @@
           grid-template-columns: 1fr;
         }
         justify-content: space-around;
-        li {
-          margin: 0 3px;
+      }
+      .diretor {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding: 0 0 60px 0;
+      }
+      .creator-item {
+        max-width: 160px;
+        &.first {
+          max-width: 200px;
+          padding-bottom: 15px;
+          border-bottom: 1px solid rgba(255, 255, 255, .2);
+        }
+        margin: 0 3px;
+        @include mqm("phablet") {
+          margin: 10px 3px;
+          flex: 1;
+        } h3 {
+          &.first {
+            @include tipo-1('smaller', 1.4, 500, white);
+            text-align: center;
+          }
+          @include tipo-1('small', 1.4, 500, white);
+          font-size: .6rem;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          padding-bottom: 10px;
           @include mqm("phablet") {
-            margin: 10px 3px;
-            flex: 1;
+            padding-bottom: 5px;
           }
-          h3 {
-              @include tipo-1('small', 1.4, 500, white);
-              font-size: .6rem;
-              text-transform: uppercase;
-              letter-spacing: 1px;
-              padding-bottom: 10px;
-              @include mqm("phablet") {
-                padding-bottom: 5px;
-              }
+        }
+        h4 {
+          &.first {
+            @include tipo-1('smaller', 1.4, 300, white);
+            text-align: center;
           }
-          h4 {
-              @include tipo-1('smaller', 1.4, 300, white);
-              font-size: .6rem;
-              opacity: .9;
-          }
+            @include tipo-1('smaller', 1.4, 300, white);
+          font-size: .6rem;
+          opacity: .9;
         }
       }
       .others {
