@@ -1,0 +1,203 @@
+.easter-egg {
+  position: relative;
+
+  .folhas {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      img {
+          max-width: 170px;
+          @include mqm('tablet') {
+              max-width: 100px;
+          }
+          position: absolute;
+          &:nth-child(1) {
+              top: 10%;
+              left: 10%;
+          }
+          &:nth-child(2) {
+              top: 40%;
+              right: 10%;
+          }
+          &:nth-child(3) {
+              top: 60%;
+              left: 50%;
+          }
+          &:nth-child(4) {
+              top: 70%;
+              left: 10%;
+          }
+          &:nth-child(5) {
+              top: 90%;
+              left: 50%;
+          }
+      }
+  }
+    
+  background: url('../img/bg-home.png');
+  padding-bottom: 50px;
+  
+  // intro start here
+  
+  &-intro {
+    position: relative;
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0 10%;
+    @include mqm('desktop') {
+      padding: 0 5%;
+    }
+    box-sizing: border-box;
+    .illustration-wrapper {
+      padding: 7% 0 7% 0;
+      @include mqm('desktop') {
+          padding-top: 10%;
+      }
+      @include mqm('tablet-wide') {
+          padding-top: 12%;
+      }
+      @include mqm('tablet') {
+          padding-top: 18%;
+      }
+      @include mqm('phone') {
+          padding-top: 25%;
+      }
+      width: 100%;
+      img {
+        max-width: 100%;
+        padding-top: 50px;
+      }
+    }
+  }
+  
+  // intro end here
+  
+  
+  
+  
+  // motivation start here
+  
+  .creators {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0 10%;
+    box-sizing: border-box;
+    @include mqm('desktop') {
+      padding: 0 5%;
+      padding-top: 150px;
+    }
+    padding-top: 150px;
+    .creators-wrapper {
+      box-sizing: border-box;
+      display: inline-block;
+      align-self: center;
+      justify-self: center;
+      padding-bottom: 60px;
+      padding: 50px 40px;
+      margin-bottom: 40px;
+      @include mqm('phone') {
+          padding: 50px 20px;
+      }
+      background: $dark-color-2;
+      h2 {
+          text-align: center;
+          @include tipo-1('big', 1, 700, white);
+          padding-bottom: 60px;
+          @include mqm('tablet-wide') {
+              padding-bottom: 40px;
+              font-size: 1.5rem;
+          }
+      }
+      .main {
+        display: grid;
+        box-sizing: border-box;
+        grid-template-columns: repeat(3, 1fr);
+        @include mqm("phablet") {
+          grid-template-columns: 1fr;
+        }
+        justify-content: space-around;
+        li {
+          margin: 0 3px;
+          @include mqm("phablet") {
+            margin: 10px 3px;
+            flex: 1;
+          }
+          h3 {
+              @include tipo-1('small', 1.4, 500, white);
+              font-size: .6rem;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              padding-bottom: 10px;
+              @include mqm("phablet") {
+                padding-bottom: 5px;
+              }
+          }
+          h4 {
+              @include tipo-1('smaller', 1.4, 300, white);
+              font-size: .6rem;
+              opacity: .9;
+          }
+        }
+      }
+      .others {
+        max-width: 500px;
+        margin: 35px auto 0 auto;
+        @include tipo-1('smaller', 1.4, 300, white);
+        font-size: .6rem;
+        opacity: .9;
+      }
+    }
+  }
+}
+    
+  // objectives end here
+
+  // history start here
+
+  .history {
+    position: relative;
+    z-index: 3;
+    &-wrapper {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      margin: 50px auto;
+      @include mqm('tablet') {
+        padding: 0 5%;
+      }
+      .title {
+        max-width: 350px;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+          @include tipo-1 ('big', 1, 700, 0);
+          font-size: 3.5;
+          text-align: center;
+        }
+        .folha {
+          margin: {
+            top: 20px;
+          }
+          img {
+            width: 40px;
+          }
+        }
+      }
+      p {
+        @include tipo-1('small', 1.4, 300, $dark-color-1);
+        text-align: justify;
+        margin-top: 20px;
+      } 
+    }
+  }

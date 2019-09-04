@@ -1,8 +1,36 @@
 .searchs {
+    @include mqm('phablet') {
+        padding-bottom: 60px;
+    }
+    position: relative;
+
+    .monte-de-folhas {
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        bottom: 277px;
+        @include mqm('tablet') {
+            bottom: 110px;
+        }
+        display: none;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-content: flex-end;
+        img {
+            max-width: 500px;
+            @include mqm('tablet') {
+                max-width: 200px;
+            }
+            position: absolute;
+        }
+    }
+    
     background: url('../img/bg-home.png');
     max-width: 100%;
-    min-height: 100vh;
     &-items {
+        position: relative;
+        z-index: 3;
         padding: 0px;
         @include mq('tablet') {
             padding: 100px;

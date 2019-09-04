@@ -4,7 +4,46 @@
     // background: url('../img/bg-home.png');
     background: $dark-color-1;
     
+    position: relative;
+
+    .folhas {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        img {
+            max-width: 170px;
+            @include mqm('tablet') {
+                max-width: 100px;
+            }
+            position: absolute;
+            &:nth-child(1) {
+                top: 10%;
+                left: 10%;
+            }
+            &:nth-child(2) {
+                top: 40%;
+                right: 10%;
+            }
+            &:nth-child(3) {
+                top: 60%;
+                left: 50%;
+            }
+            &:nth-child(4) {
+                top: 70%;
+                left: 10%;
+            }
+            &:nth-child(5) {
+                top: 90%;
+                left: 50%;
+            }
+        }
+    }
+    
     &-items {
+        position: relative;
+        z-index: 3;
         @include mq('tablet') {
             padding: 100px;
             padding-top: 40px;
