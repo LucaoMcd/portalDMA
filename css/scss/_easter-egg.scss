@@ -103,7 +103,7 @@
       .title {
         h2 {
           text-align: center;
-          @include tipo-1('big', 1, 700, white);
+          @include tipo-1('big', 1, 700, blue);
           padding-bottom: 15px;
           font-size: 2rem;
           @include mqm('tablet-wide') {
