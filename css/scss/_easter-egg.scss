@@ -77,6 +77,8 @@
       .illustration {
         display: flex;
         justify-content: center;
+        -webkit-transform: translateZ(0px);
+        transform: translateZ(0px); 
         img {
           display: block;
           position: relative;
