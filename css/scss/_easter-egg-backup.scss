@@ -77,23 +77,13 @@
       .illustration {
         display: flex;
         justify-content: center;
-        -webkit-transform: translateZ(0px);
-        transform: translateZ(0px); 
-        height: auto;
         img {
-          display: block;
-          position: relative;
-          height: auto;
-          z-index: 3;
           max-width: 500px;
-          top: 136.5px;
           @include mqm('tablet') {
             max-width: 370px;
-            top: 100.5px;
           }
           @include mqm('phone') {
             max-width: 270px;
-            top: 73.5px;
           }
         }
       }
