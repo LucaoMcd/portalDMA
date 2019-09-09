@@ -76,13 +76,17 @@
       width: 100%;
       .illustration {
         img {
+          position: relative;
+          top: 136.5px;
           margin: 0 auto;
           max-width: 500px;
           @include mqm('tablet') {
             max-width: 370px;
+            top: 100.5px;
           }
           @include mqm('phone') {
             max-width: 270px;
+            top: 73.5px;
           }
         }
       }
@@ -102,7 +106,7 @@
       .title {
         h2 {
           text-align: center;
-          @include tipo-1('big', 1, 700, red);
+          @include tipo-1('big', 1, 700, yellow);
           padding-bottom: 15px;
           font-size: 2rem;
           @include mqm('tablet-wide') {
