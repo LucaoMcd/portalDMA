@@ -1,0 +1,236 @@
+* {
+	padding:0;
+	margin:0;
+}
+html{
+	background:url(../pics/bg-site.png) repeat;
+	height:100%;
+	}
+body {
+	background:url(../pics/bg-site-top.png) repeat-x;
+	font-family:Arial, Helvetica, sans-serif;
+	text-align:center;
+	height:100%;
+}
+body img {
+	display:block;
+}
+a, input {
+	text-decoration:none;
+	outline:0;
+	color:#6c6e70;
+}
+a:hover {
+	color:#173D8E;
+}
+li {
+	list-style:none;
+}
+a img {
+	border: 0;
+}
+.right {
+	float:right;
+	margin-left:15px;
+}
+.left {
+	float:left;
+	margin-right:10px;
+	margin-top:10px;
+}
+.center {
+	margin:0 auto;
+	text-align:center;
+}
+.borda {
+	border:1px solid #ccc;
+}
+.clear {
+	clear: both;
+}
+.link{color:#1B6FB3;}
+.link:hover{text-decoration:underline;color:#1B6FB3;}
+#envoltorio {
+	width:100%;
+	margin:0 auto;
+	position:relative;
+}
+
+.right0{margin-right:0px !important;}
+.left0{margin-left:0px !important; }
+/************** TEXTOS ***********************/
+p, h1, h2, h3, h4, h5 {
+	
+}
+h1 {
+	text-indent:-9000em;
+	overflow:hidden;
+}
+h2 {
+	font:normal 24px 'BlueHighwayDTypeRegular';
+	background:url(../pics/seta.png) 0 7px no-repeat;
+	padding-left:25px;
+	color:#56802d;
+	margin:0 0 5px 0;
+}
+h3 {
+	font:normal 20px 'BlueHighwayDTypeRegular';
+	color:#56802d;
+	margin:0 0 10px 0;
+}
+h4 {
+	font:normal 18px 'BlueHighwayDTypeRegular';
+	color:#174134;
+}
+p {
+	font:normal 11px Arial, Helvetica, sans-serif;
+	color:#174134;
+	margin:0px 0 10px 0;
+	line-height:16px;
+}
+
+/************** TOPO ***********************/
+#topo {
+	width:1000px;
+	height:265px;
+	margin:0 auto;
+	position:relative;
+}
+#logo {
+	float:left;
+	margin-top:50px;
+	margin-left:10px;
+}
+#menu{
+	clear:both;
+	width:1000px;
+	height:78px;
+	background:url(../pics/menu01.png) no-repeat;
+	font:normal 14px 'BlueHighwayDTypeRegular';
+	}
+#linha1{float:left;margin:9px 0 0 10px;}
+#linha1 li{float:left; margin-right:20px;}
+#linha1 li a{color:#fff;}
+#linha1 li a:hover{color:#C8D12B;}
+#linha2{float:left; clear:both;margin:24px 0 0 10px;}
+#linha2 li{float:left;margin-right:20px;}
+#linha2 li a{color:#007f2f;}
+#linha2 li a:hover{color:#fff;}
+#linha2 li#data{background:url(../pics/data.png) no-repeat; padding-left:23px;}
+#linha2 li#tempo{background:url(../pics/tempo.png) no-repeat; padding-left:23px;}
+#linha2 li#mare{background:url(../pics/mare.png) no-repeat; padding-left:23px;}
+#linha2 li#praia{background:url(../pics/praia-limpa.png) no-repeat; padding-left:23px;}
+
+/************** ANIMA ***********************/
+#animacao{width:725px; float:right;}
+
+/************** HOME ***********************/
+
+#home, #internas {
+	background:url(../pics/bg-conteudo.png) repeat-y;
+	width:1000px;
+	margin:0 auto;
+	text-align:left;
+	padding:30px 0;
+}
+#home .box-noticias{width:208px; margin:0 0 10px 20px; float:left;}
+#home .box-noticias img{margin-bottom:5px;}
+#home .box-noticias a{color:#174134;}
+#home .box-noticias a:hover{text-decoration:underline;}
+
+#lado-esquerdo{float:left; width:665px; margin-left:10px;}
+#lado-direito{width:290px; float:right; margin-right:10px;}
+
+.box{width:317px; float:left; margin-bottom:15px;}
+.margem-box{margin-right:30px;}
+
+a.botao{display:block; background:url(../pics/botao.png) no-repeat; padding-top:4px; width:72px; height:19px; float:right; color:#fff;font:normal 12px 'BlueHighwayDTypeRegular'; text-align:center; margin-bottom:10px; margin-top:0px;}
+a.botao:hover{background-position:0 bottom; color:#007F2F;}
+
+ul.lista{font:normal 11px Arial, Helvetica, sans-serif;	color:#424242;	margin:0px 0 10px 0;}
+ul.lista li{background:url(../pics/setinha.png) 0px 4px no-repeat; padding-left:11px; display:block; margin-bottom:3px;}
+ul.lista li a{color:#424242;}
+ul.lista li a:hover{text-decoration:underline;}
+
+/************** RODAPE ***********************/
+#rodape-out {
+	width:100%;
+	height:300px;
+}
+#rodape-in {
+	position:relative;
+	width:1000px;
+	height:300px;
+	margin:0 auto;
+	background:url(../pics/bg-footer.jpg) no-repeat;
+}	
+#paginas{position:absolute; right:0px; bottom:23px;}
+#paginas li{float:left; margin-right:10px;}
+
+/***************FORMULÁRIO*********************/
+
+#form-contato {
+	margin:20px 0;
+	width:365px;
+	float:left;
+}
+#form-contato p {
+	margin:15px auto 25px 40px !important;
+}
+#form-contato fieldset {
+	border:none;
+	width:380px;
+}
+input.contato, textarea {
+	font:normal 13px arial;
+	color:#6C6E70;
+	border:1px solid #DFDFDF;
+	background:#EFEFEF;
+}
+input.contato:focus, textarea:focus {
+	background-color:#173D8E;
+	color:#FFFFFF;
+}
+#form-contato label {
+	width:80px;
+	font:bold 11px Arial, Helvetica, sans-serif;
+	color:#000;
+	text-align:right;
+	padding-right:10px;
+	padding-top:11px;
+	float:left;
+	display:inline;
+	cursor:pointer;
+}
+input.contato {
+	width:350px;
+	height:20px;
+	margin:0 7px 8px 0;
+	padding:6px;
+}
+textarea {
+	width:351px;
+	height:110px;
+	margin:3px 0 0 0;
+	overflow:auto;
+	padding:5px;
+}
+legend {
+	font:normal 18px 'BlueHighwayDTypeRegular';
+	color:#174134;
+}
+.enviar {
+	width:80px;
+	height:35px;
+	color:#6C6E70;
+	border:1px solid #DFDFDF;
+	background:#EFEFEF;
+	cursor:pointer;
+	float:right;
+	font:normal 15px Arial, Helvetica, sans-serif;
+	margin:10px 17px 0 0;
+}
+.enviar:hover {
+	background-color:#173D8E;
+	color:#FFFFFF;
+}

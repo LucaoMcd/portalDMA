@@ -92,6 +92,10 @@
    
 
 
+<section class="instafeed">
+
+</section>
+
 <!-- =========================== Description start here ============================= -->
 <section class="content">
     <img src="./img/EE.jpg" alt="Eficiência energética">
@@ -168,7 +172,16 @@
 <script src="js/libs/jquery-3.4.0.min.js" async></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
 <script src="js/libs/owl.carousel.min.js" async></script>
+<script src="./node_modules/instafeed.js/instafeed.min.js"></script>
 <script type="module" src="js/main.js"></script>
+
+<script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'popular',
+        clientId: '1580232488.862a89b.c3cd95bbf05147218c8cbe65c861b87d'
+    });
+    feed.run();
+</script>
             
 <!-- ========================== javascript start here ========================== -->
 </body>
